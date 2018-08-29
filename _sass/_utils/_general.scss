@@ -1,0 +1,44 @@
+blockquote {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  color: $text-1;
+  font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  a {
+    color: $text-0;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      color: $text-1;
+    }
+  }
+}
+
+a.nostyle {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.dc-red {
+  color: $dc-red;
+}
+
+.principal-green {
+  color: $principal-green;
+}
+
+.tight.small {
+  font-size: $font-size-base * 3.25;
+}

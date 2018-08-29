@@ -1,0 +1,25 @@
+---
+title: The Debt Collective
+timezone: UTC
+defaults:
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+permalink: pretty
+author: The Debt Collective
+email: organizers@debtcollective.org
+description: The Debt Collective
+rss: rss
+discourse:
+  endpoint: https://community.debtsyndicate.org
+  paths:
+    campaigns: "/campaigns"
+    collectives: "/collectives"
+    events: "/calendar"
+plugins:
+- jekyll-seo-tag
+markdown: DebtCollective
+exclude:
+- ".circleci"

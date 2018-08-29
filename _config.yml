@@ -1,12 +1,6 @@
 ---
 title: The Debt Collective
 timezone: UTC
-defaults:
-- scope:
-    path: ''
-    type: pages
-  values:
-    layout: page
 permalink: pretty
 author: The Debt Collective
 email: organizers@debtcollective.org

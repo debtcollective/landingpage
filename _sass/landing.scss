@@ -1,11 +1,24 @@
-body {
-  overflow-x: hidden;
-
-  background: linear-gradient($bg-blue, $white 1000px), linear-gradient($white, $bg-blue), url(https://s3.amazonaws.com/tds-static/img/debtcollective/0.0.1/bg-tile.png);
-  background-repeat: no-repeat, no-repeat, repeat;
-  background-position: auto, bottom, auto;
+html {
+  height: 100%;
 }
 
+body {
+  height: 100%;
+  overflow-x: hidden;
+  background: linear-gradient($bg-blue, $white 1000px), url(https://s3.amazonaws.com/tds-static/img/debtcollective/0.0.1/bg-tile.png);
+  background-repeat: no-repeat, repeat;
+}
+
+.wrapper {
+  /* all the following defines the white-blue fade at the bottom of the page */
+  background-image: linear-gradient($white, $bg-blue);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% 30%;
+  width: 100%;
+  margin-bottom: -3em;
+  padding-bottom: 3em;
+}
 
 #landing-image {
   background-image: url("../assets/images/landing-green-red-long.png");

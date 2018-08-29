@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="Home container mt-5 landing">
-  <div class="row">
+  <div class="row" id="above-the-fold">
     <div class="col-5">
       <h1 class="tight">Organize</h1>
       <h1 class="tight">Resist</h1>
@@ -24,12 +24,14 @@ layout: default
     <div id="landing-image" class="col-7"></div>
   </div>
 
+
+<div id="learn-more">
   <div class="row">
     {% for option in site.data.learnmore %}
     <div class="col">
       <img class="learn-more-image" height="250" width="250" alt="{{ option.heading }}"
            src="{{ option.image_domain | append: option.image_path }}" />
-    </div>    
+    </div>
     {% endfor %}
   </div>
   <div class="row">
@@ -47,13 +49,14 @@ layout: default
     <div class="col"><button class="btn btn-primary">Learn more</button></div>
     {% endfor %}
   </div>
-  
+</div>
+
   <div id="sign-up">
     <h3>Sign up and create an account to get started</h3>
     <button class="btn btn-primary">Join Us</button>
   </div>
 
-  <div class="row">
+  <div class="row" id="about">
     <div class="col-5">
       <div id="placeholder-image"></div>
       <p class="quote">The Debt Collective leverages collective power by offering debtors a shared platform for direct action.</p>

@@ -1,0 +1,69 @@
+body {
+  overflow-x: hidden;
+
+  background: linear-gradient($bg-blue, $white 1000px), linear-gradient($white, $bg-blue), url(https://s3.amazonaws.com/tds-static/img/debtcollective/0.0.1/bg-tile.png);
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: auto, bottom, auto;
+}
+
+
+#landing-image {
+  background-image: url("../assets/images/landing-green-red-long.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: -5em;
+}
+
+.learn-more-image {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  height: auto;
+}
+
+#placeholder-image {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+}
+
+#sign-up {
+  background-color: $text-0;
+  color: $white;
+  text-align: center;
+  padding: 3rem 0;
+  margin: 3rem -100%;
+
+  button {
+    width: 10%;
+  }
+}
+
+.landing {
+  padding-top: 6rem;
+
+  button {
+    width: 100%
+  };
+
+  h1 {
+    line-height: .7em;
+  };
+
+  h1:after {
+    content: ".";
+  };
+
+  #join {
+    margin-top: 7rem;
+  };
+
+  h3:after {
+    content: "."
+  }
+
+  p:first-of-type {
+    margin-top: 3rem;
+  }
+
+}

@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<div class="Home container mt-5">
+<div class="Home container mt-5 landing">
   <div class="row">
     <div class="col-5">
-      <h1>Organize</h1> <br />
-      <h1>Resist</h1><br />
-      <h1>Rebuild</h1>
+      <h1 class="tight">Organize</h1>
+      <h1 class="tight">Resist</h1>
+      <h1 class="tight">Rebuild</h1>
 
       <p><strong>You are not a loan.</strong></p>
 
@@ -19,34 +19,43 @@ layout: default
 
       <button class="btn btn-primary">Join Us</button>
 
-      <h2>Join the Community of Fellow Debtors.</h2>
+      <h2 id="join">Join the Community of Fellow Debtors.</h2>
     </div>
-    <div class="col-7">
-      <img width="100px" height="100px" src="assets/images/landing-green-red-long.png" />
-    </div>
+    <div id="landing-image" class="col-7"></div>
   </div>
 
   <div class="row">
-      {%- include learn-more.html heading="Organize" image="assets/images/handshake.png" text="Make plans to take collective action together." -%}
-      {%- include learn-more.html heading="Stay Informed" image="assets/images/newspaper.png" text="Learn more about who is taking your money and how to build power to fight back." -%}
-      {% assign image_url = site.data.urls.dispute-tools.endpoint | append: "/images/tools/hand.png" %}
-      {%- include learn-more.html heading="Fight Back" image=image_url text="Dispute your loans and stop predatory lenders." -%}
-  </div>
-
-  <div class="row">
-    <div class="col"><h3>Sign up and create an account to get started.</h3></div>
-  </div>
-  <div class="row">
-    <div class="col"></div> <!-- this makes sure the button is aligned with above -->
+    {% for option in site.data.learnmore %}
     <div class="col">
-      <button class="btn btn-primary">Join Us</button>
-    </div>
-    <div class="col"></div> <!-- see above -->
+      <img class="learn-more-image" height="250" width="250" alt="{{ option.heading }}"
+           src="{{ option.image_domain | append: option.image_path }}" />
+    </div>    
+    {% endfor %}
+  </div>
+  <div class="row">
+    {% for option in site.data.learnmore %}
+    <div class="col"><h3>{{ option.heading }}</h3></div>
+    {% endfor %}
+  </div>
+  <div class="row">
+    {% for option in site.data.learnmore %}
+    <div class="col"><p>{{ option.text }}</p></div>
+    {% endfor %}
+  </div>
+  <div class="row">
+    {% for option in site.data.learnmore %}
+    <div class="col"><button class="btn btn-primary">Learn more</button></div>
+    {% endfor %}
+  </div>
+  
+  <div id="sign-up">
+    <h3>Sign up and create an account to get started</h3>
+    <button class="btn btn-primary">Join Us</button>
   </div>
 
   <div class="row">
     <div class="col-5">
-      <img src="" height="100px" width="100px" />
+      <div id="placeholder-image"></div>
       <p class="quote">The Debt Collective leverages collective power by offering debtors a shared platform for direct action.</p>
     </div>
     <div class="col-7">
@@ -55,7 +64,7 @@ layout: default
         Today most of us are in debt.
         No matter how much we work or how hard we try to get ahead, we are barely getting by.
         We are struggling to get out from under student debt, medical debt, payday loans, housing debt, criminal justice debt, credit card debt, and more.
-        For too long, we've experienced these debts in fear and isolation, while otherse get rich off of our monthly payments.
+        For too long, we've experienced these debts in fear and isolation, while others get rich off of our monthly payments.
       </p>
       <p>
         The Debt Collective is here to say, no more!

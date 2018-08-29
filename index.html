@@ -1,33 +1,67 @@
 ---
-layout: default-hero
+layout: default
 ---
 
-{% include all-posts.html %}
 <div class="Home container mt-5">
   <div class="row">
-    <div class="col-md-8 col-lg-6 offset-lg-3 offset-md-2 Home__posts-latest">
-      {% assign post = all_posts | first %}
+    <div class="col-5">
+      <h1>Organize</h1> <br />
+      <h1>Resist</h1><br />
+      <h1>Rebuild</h1>
 
-      {%- include index-feed-item.html -%}
+      <p><strong>You are not a loan.</strong></p>
+
+      <p>
+        Join the Debt Collective to fight economic exploitation!
+        Here you can dispute your debts, challenge creditors, and join others to organize campaigns, direct actions, and financial disobedience.
+        Together we can build a new economy where no one has to go into debt to meet their basic needs.
+      </p>
+
+      <button class="btn btn-primary">Join Us</button>
+
+      <h2>Join the Community of Fellow Debtors.</h2>
+    </div>
+    <div class="col-7">
+      <img width="100px" height="100px" src="assets/images/landing-green-red-long.png" />
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-6">
-      {% assign artwork = site.artwork | first %}
+      {%- include learn-more.html heading="Organize" image="assets/images/handshake.png" text="Make plans to take collective action together." -%}
+      {%- include learn-more.html heading="Stay Informed" image="assets/images/newspaper.png" text="Learn more about who is taking your money and how to build power to fight back." -%}
+      {% assign image_url = site.data.urls.dispute-tools.endpoint | append: "/images/tools/hand.png" %}
+      {%- include learn-more.html heading="Fight Back" image=image_url text="Dispute your loans and stop predatory lenders." -%}
+  </div>
 
-      {%- include latest-artwork.html -%}
+  <div class="row">
+    <div class="col"><h3>Sign up and create an account to get started.</h3></div>
+  </div>
+  <div class="row">
+    <div class="col"></div> <!-- this makes sure the button is aligned with above -->
+    <div class="col">
+      <button class="btn btn-primary">Join Us</button>
     </div>
-    <div class="col-md-6 Home__posts-list">
-      {% for post in all_posts %}
-        {% if forloop.first %}
-        {% else %}
-          {% case forloop.index %}
-            {% when 2 or 3 %}
-              {%- include index-feed-item.html %}
-          {% endcase %}
-        {% endif %}
-      {% endfor %}
+    <div class="col"></div> <!-- see above -->
+  </div>
+
+  <div class="row">
+    <div class="col-5">
+      <img src="" height="100px" width="100px" />
+      <p class="quote">The Debt Collective leverages collective power by offering debtors a shared platform for direct action.</p>
+    </div>
+    <div class="col-7">
+      <h2>What is The Debt Collective?</h2>
+      <p>
+        Today most of us are in debt.
+        No matter how much we work or how hard we try to get ahead, we are barely getting by.
+        We are struggling to get out from under student debt, medical debt, payday loans, housing debt, criminal justice debt, credit card debt, and more.
+        For too long, we've experienced these debts in fear and isolation, while otherse get rich off of our monthly payments.
+      </p>
+      <p>
+        The Debt Collective is here to say, no more!
+        We are a membership....
+      </p>
+      <button class="btn btn-primary">Read More</button>
     </div>
   </div>
 </div>

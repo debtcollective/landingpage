@@ -1,14 +1,11 @@
 intro:
-  title:
-    - "Organize"
-    - "Resist"
-    - "Rebuild"
+  title: "Organize. Resist. Rebuild."
   text:
     - "You are not a loan."
     - "Join the Debt Collective to fight economic exploitation! Here you can dispute your debts, challenge creditors, and join others to organize campaigns, direct actions, and financial disobedience. Together we can build a new economy where no one has to go into debt to meet their basic needs."
   subtitle: "Join the Community of Fellow Debtors."
 # copy for the learn more section is in ./learn-more.yml
-signup: "Sign up and create an account to get started"
+signup: "Sign up and create an account to get started."
 coda:
   title: "What is The Debt Collective?"
   text:

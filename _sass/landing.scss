@@ -20,11 +20,29 @@ body {
   padding-bottom: 3em;
 }
 
-#landing-image {
-  background-image: url("../assets/images/landing-green-red-long.png");
-  background-size: cover;
+.landing-image {
+  background-image: url("../assets/images/landing-image.png");
   background-repeat: no-repeat;
-  margin-left: -5em;
+}
+
+.small .landing-image {
+  width: 100%;
+  height: 25rem;
+  background-size: 130% auto;
+  background-position-y: -5rem;
+  background-position-x: 60%;
+}
+
+.medium .landing-image {
+  background-size: auto 145%;
+  background-position-y: -4.5rem;
+  background-position-x: 50%;
+}
+
+.large .landing-image {
+  margin-left: -5rem;
+  background-position-y: -10rem;
+  background-size: cover;
 }
 
 .learn-more-image {
@@ -60,23 +78,16 @@ body {
   };
 
   h1 {
-    line-height: .7em;
-  };
-
-  h1:after {
-    content: ".";
+    width: 1px; // forces the words to be on different lines
   };
 
   #join {
-    margin-top: 7rem;
+    margin-top: 4rem;
   };
 
-  h3:after {
-    content: "."
+  .intro p:first-of-type {
+    margin-top: 1.8rem;
+    margin-bottom: 1.4rem;
+    font-weight: 600;
   }
-
-  p:first-of-type {
-    margin-top: 3rem;
-  }
-
 }

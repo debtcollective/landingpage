@@ -6,29 +6,42 @@ layout: default
 
 <div class="Home container mt-5 landing">
 
+  <!-- intro is different for different sizes -->
+  {% assign intro-title = "<h1 class='tight'>" | append: copy.intro.title | append: "</h1>" %}
+  {% assign intro-subtitle = "<h2 id='join'>" | append: copy.intro.subtitle | append: "</h2>" %}
 
-
-
-
-    <div class="row" id="intro">
-    <div class="col-lg-5 col-12 no-gutters">
-      {% for title in copy.intro.title %}
-        <h1 class="tight">{{ title }}</h1>
-      {% endfor %}
-
-      <div class="col-md-7 d-lg-none d-block landing-image"></div>
-
-      {% for paragraph in copy.intro.text %}
-        <p>{{paragraph}}</p>
-      {% endfor %}
-        
-      <button class="btn btn-primary">{{copy.button.join}}</button>
-
-      <h2 id="join">{{ copy.intro.subtitle }}</h2>
+  <!-- mobile/narrow window (xs and sm) -->
+  <div class="intro row d-flex d-md-none small">
+    <div class="col">
+      {{ intro-title }}
+      {% include text-and-button.html text=copy.intro.text button=copy.button.join %}
+      <div class="landing-image"></div>
+      {{ intro-subtitle }}
     </div>
-    <div class="col-md-7 d-md-block d-none landing-image"></div>
   </div>
 
+  <!-- md -->
+  <div class="intro row d-none d-md-flex d-lg-none medium">
+    <div class="col-5">{{ intro-title }}</div>
+      <div class="col-7 landing-image"></div>
+  </div>
+  <div class="intro row d-none d-md-flex d-lg-none medium">
+    <div class="col">
+        {%- include text-and-button.html text=copy.intro.text button=copy.button.join -%}
+        {{ intro-subtitle }}
+    </div>
+  </div>
+
+  <!-- lg and xl -->
+  <div class="intro row d-none d-lg-flex large">
+    <div class="col-5">
+        {{ intro-title }}
+        {%- include text-and-button.html text=copy.intro.text button=copy.button.join -%}
+        {{ intro-subtitle }}
+      </div>
+      <div class="col-7 landing-image"></div>
+  </div>
+  
 
   <div id="learn-more" class="row">
     {%- include learn-more.html heading="Organize" image="assets/images/handshake.png" text="Make plans to take collective action together." -%}

@@ -2,26 +2,31 @@
 layout: default
 ---
 
+{% assign copy = site.data.copy %}
+
 <div class="Home container mt-5 landing">
-  <div class="row" id="above-the-fold">
-    <div class="col-5 no-gutters">
-      <h1 class="tight">Organize</h1>
-      <h1 class="tight">Resist</h1>
-      <h1 class="tight">Rebuild</h1>
 
-      <p><strong>You are not a loan.</strong></p>
 
-      <p>
-        Join the Debt Collective to fight economic exploitation!
-        Here you can dispute your debts, challenge creditors, and join others to organize campaigns, direct actions, and financial disobedience.
-        Together we can build a new economy where no one has to go into debt to meet their basic needs.
-      </p>
 
-      <button class="btn btn-primary">Join Us</button>
 
-      <h2 id="join">Join the Community of Fellow Debtors.</h2>
+
+    <div class="row" id="intro">
+    <div class="col-lg-5 col-12 no-gutters">
+      {% for title in copy.intro.title %}
+        <h1 class="tight">{{ title }}</h1>
+      {% endfor %}
+
+      <div class="col-md-7 d-lg-none d-block landing-image"></div>
+
+      {% for paragraph in copy.intro.text %}
+        <p>{{paragraph}}</p>
+      {% endfor %}
+        
+      <button class="btn btn-primary">{{copy.button.join}}</button>
+
+      <h2 id="join">{{ copy.intro.subtitle }}</h2>
     </div>
-    <div id="landing-image" class="col-7"></div>
+    <div class="col-md-7 d-md-block d-none landing-image"></div>
   </div>
 
 
@@ -33,28 +38,23 @@ layout: default
   </div>
 
   <div id="sign-up">
-    <h3>Sign up and create an account to get started</h3>
-    <button class="btn btn-primary">Join Us</button>
+    <h3>{{ copy.signup }}</h3>
+    <button class="btn btn-primary">{{ copy.button.join }}</button>
   </div>
 
   <div class="row" id="about">
     <div class="col-5">
       <div id="placeholder-image"></div>
-      <p class="quote">The Debt Collective leverages collective power by offering debtors a shared platform for direct action.</p>
+      <p class="quote">{{ copy.coda.caption }}</p>
     </div>
     <div class="col-7">
-      <h2>What is The Debt Collective?</h2>
-      <p>
-        Today most of us are in debt.
-        No matter how much we work or how hard we try to get ahead, we are barely getting by.
-        We are struggling to get out from under student debt, medical debt, payday loans, housing debt, criminal justice debt, credit card debt, and more.
-        For too long, we've experienced these debts in fear and isolation, while others get rich off of our monthly payments.
-      </p>
-      <p>
-        The Debt Collective is here to say, no more!
-        We are a membership....
-      </p>
-      <button class="btn btn-primary">Read More</button>
+      <h2>{{ copy.coda.title }}</h2>
+
+      {% for paragraph in copy.coda.text %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
+
+      <button class="btn btn-primary">{{ copy.button.read }}</button>
     </div>
   </div>
 </div>

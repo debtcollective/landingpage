@@ -11,7 +11,7 @@ layout: default
   {% assign intro-subtitle = "<h2 id='join'>" | append: copy.intro.subtitle | append: "</h2>" %}
 
   <!-- mobile/narrow window (xs and sm) -->
-  <div class="intro row d-flex d-md-none small">
+  <div class="intro row d-flex d-md-none small-intro">
     <div class="col">
       {{ intro-title }}
       {% include text-and-button.html text=copy.intro.text button=copy.button.join %}
@@ -21,11 +21,11 @@ layout: default
   </div>
 
   <!-- md -->
-  <div class="intro row d-none d-md-flex d-lg-none medium">
+  <div class="intro row d-none d-md-flex d-lg-none medium-intro">
     <div class="col-5">{{ intro-title }}</div>
       <div class="col-7 landing-image"></div>
   </div>
-  <div class="intro row d-none d-md-flex d-lg-none medium">
+  <div class="intro row d-none d-md-flex d-lg-none medium-intro">
     <div class="col">
         {%- include text-and-button.html text=copy.intro.text button=copy.button.join -%}
         {{ intro-subtitle }}
@@ -33,7 +33,7 @@ layout: default
   </div>
 
   <!-- lg and xl -->
-  <div class="intro row d-none d-lg-flex large">
+  <div class="intro row d-none d-lg-flex large-intro">
     <div class="col-5">
         {{ intro-title }}
         {%- include text-and-button.html text=copy.intro.text button=copy.button.join -%}
@@ -41,7 +41,8 @@ layout: default
       </div>
       <div class="col-7 landing-image"></div>
   </div>
-  
+
+  <!-- end intro section -->
 
   <div id="learn-more" class="row">
     {%- include learn-more.html heading="Organize" image="assets/images/handshake.png" text="Make plans to take collective action together." -%}
@@ -50,24 +51,25 @@ layout: default
     {%- include learn-more.html heading="Fight Back" image=image_url text="Dispute your loans and stop predatory lenders." -%}
   </div>
 
-  <div id="sign-up">
-    <h3>{{ copy.signup }}</h3>
-    <button class="btn btn-primary">{{ copy.button.join }}</button>
+  <div id="sign-up" class="row">
+    <div class="col">
+      <h3>{{ copy.signup }}</h3>
+      <button class="btn btn-primary">{{ copy.button.join }}</button>
+    </div>
   </div>
 
   <div class="row" id="about">
-    <div class="col-5">
-      <div id="placeholder-image"></div>
-      <p class="quote">{{ copy.coda.caption }}</p>
+    <div class="col-12 order-2 col-md-5 order-md-1">
+      <div id="coda-image"></div>
+      <div class="caption-wrapper">
+        <p class="caption">{{ copy.coda.caption }}</p>
+      </div>
     </div>
-    <div class="col-7">
+
+    <div class="col-12 order-1 col-md-7 order-md-2">
       <h2>{{ copy.coda.title }}</h2>
 
-      {% for paragraph in copy.coda.text %}
-        <p>{{ paragraph }}</p>
-      {% endfor %}
-
-      <button class="btn btn-primary">{{ copy.button.read }}</button>
+      {% include text-and-button.html text=copy.coda.text button=copy.button.read %}
     </div>
   </div>
 </div>

@@ -25,24 +25,42 @@ body {
   background-repeat: no-repeat;
 }
 
-.small .landing-image {
-  width: 100%;
-  height: 25rem;
-  background-size: 130% auto;
-  background-position-y: -5rem;
-  background-position-x: 60%;
+.small-intro {
+  .landing-image {
+    width: 100%;
+    height: 25rem;
+    background-size: auto 34rem;
+    background-position: 50% -6rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 1.625rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
 
-.medium .landing-image {
-  background-size: auto 145%;
-  background-position-y: -4.5rem;
-  background-position-x: 50%;
+.medium-intro {
+  .landing-image {
+    background-size: auto 145%;
+    background-position-y: -4.5rem;
+    background-position-x: 50%;
+  }
 }
 
-.large .landing-image {
-  margin-left: -5rem;
-  background-position-y: -10rem;
-  background-size: cover;
+.large-intro {
+  .landing-image {
+    margin-left: -5rem;
+    background-position-y: -10rem;
+    background-size: cover;
+  }
 }
 
 .learn-more-image {
@@ -50,12 +68,6 @@ body {
   width: 50%;
   margin: 0 auto;
   height: auto;
-}
-
-#placeholder-image {
-  width: 100%;
-  height: auto;
-  min-height: 300px;
 }
 
 #sign-up {
@@ -90,4 +102,25 @@ body {
     margin-bottom: 1.4rem;
     font-weight: 600;
   }
+}
+
+button {
+  margin: auto auto 2rem auto;
+}
+
+#coda-image {
+  min-height: 300px;
+  background-image: url("../assets/images/coda-image.png");
+  background-size: contain;
+}
+
+.caption-wrapper::before {
+  font-size: 3rem;
+  content: '\201C';
+}
+
+.caption {
+  display: block;
+  margin: -2.5rem 0 0 1.5rem;
+  font-size: 1.5em;
 }

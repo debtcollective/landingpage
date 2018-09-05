@@ -6,6 +6,7 @@ discourse:
     campaigns: '/campaigns'
     collectives: '/collectives'
     events: '/calendar'
+    login: '/login'
 s3:
   endpoint: 'https://s3.amazonaws.com/tds-static'
 dispute-tools:
@@ -16,3 +17,5 @@ dispute-tools:
     donate: '/donate'
 wiki:
   endpoint: 'https://wiki.debtcollective.org'
+power-report:
+  endpoint: 'https://powerreport.debtcollective.org'

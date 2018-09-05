@@ -3,20 +3,24 @@ layout: default
 ---
 
 {% assign copy = site.data.copy %}
+{% assign urls = site.data.urls %}
+{% assign login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
 
 <div class="Home container mt-5 landing">
 
   <!-- intro is different for different sizes -->
-  {% assign intro-title = "<h1 class='tight'>" | append: copy.intro.title | append: "</h1>" %}
-  {% assign intro-subtitle = "<h2 id='join'>" | append: copy.intro.subtitle | append: "</h2>" %}
+  {% assign intro_title = "<h1 class='tight'>" | append: copy.intro.title | append: "</h1>" %}
+  {% assign intro_subtitle = "<h2 id='join'>" | append: copy.intro.subtitle | append: "</h2>" %}
 
   <!-- mobile/narrow window (xs and sm) -->
   <div class="intro row d-flex d-md-none small-intro">
     <div class="col">
-      {{ intro-title }}
-      {% include text-and-button.html text=copy.intro.text button=copy.button.join %}
+      {{ intro_title }}
+
+      {%- include text.html text=copy.intro.text -%}
+      <a class="btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
       <div class="landing-image"></div>
-      {{ intro-subtitle }}
+      {{ intro_subtitle }}
     </div>
   </div>
 
@@ -27,17 +31,19 @@ layout: default
   </div>
   <div class="intro row d-none d-md-flex d-lg-none medium-intro">
     <div class="col">
-        {%- include text-and-button.html text=copy.intro.text button=copy.button.join -%}
-        {{ intro-subtitle }}
+      {%- include text.html text=copy.intro.text -%}
+      <a class="btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
+      {{ intro_subtitle }}
     </div>
   </div>
 
   <!-- lg and xl -->
   <div class="intro row d-none d-lg-flex large-intro">
     <div class="col-5">
-        {{ intro-title }}
-        {%- include text-and-button.html text=copy.intro.text button=copy.button.join -%}
-        {{ intro-subtitle }}
+        {{ intro_title }}
+        {%- include text.html text=copy.intro.text -%}
+        <a class="btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
+        {{ intro_subtitle }}
       </div>
       <div class="col-7 landing-image"></div>
   </div>
@@ -45,20 +51,33 @@ layout: default
   <!-- end intro section -->
 
   <div id="learn-more" class="row">
-    {%- include learn-more.html heading="Organize" image="assets/images/handshake.png" text="Make plans to take collective action together." -%}
-    {%- include learn-more.html heading="Stay Informed" image="assets/images/newspaper.png" text="Learn more about who is taking your money and how to build power to fight back." -%}
-    {% assign image_url = site.data.urls.dispute-tools.endpoint | append: "/images/tools/hand.png" %}
-    {%- include learn-more.html heading="Fight Back" image=image_url text="Dispute your loans and stop predatory lenders." -%}
+    {% assign collectives_url =
+      urls.discourse.endpoint | append: urls.discourse.collectives %}
+    {%- include learn-more.html heading="Organize" image="assets/images/handshake.png"
+      text="Make plans to take collective action together."
+      target=collectives_url -%}
+
+    {%- include learn-more.html heading="Stay Informed" image="assets/images/newspaper.png"
+      text="Learn more about who is taking your money and how to build power to fight back."
+      target=urls.power-report.endpoint -%}
+
+    {% assign image_url =
+      urls.dispute-tools.endpoint | append: "/images/tools/hand.png" %}
+    {% assign dispute_url =
+      urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.dispute-tools %}
+    {%- include learn-more.html heading="Fight Back" image=image_url
+      text="Dispute your loans and stop predatory lenders."
+      target=dispute_url -%}
   </div>
 
   <div id="sign-up" class="row">
     <div class="col">
       <h3>{{ copy.signup }}</h3>
-      <button class="btn btn-primary">{{ copy.button.join }}</button>
+      <a class="btn btn-primary" href={{ login_url }}>{{ copy.button.join }}</a>
     </div>
   </div>
 
-  <div class="row" id="about">
+  <div class="row" id="coda">
     <div class="col-12 order-2 col-md-5 order-md-1">
       <div id="coda-image"></div>
       <div class="caption-wrapper">
@@ -68,8 +87,13 @@ layout: default
 
     <div class="col-12 order-1 col-md-7 order-md-2">
       <h2>{{ copy.coda.title }}</h2>
-
-      {% include text-and-button.html text=copy.coda.text button=copy.button.read %}
+      {%- include text.html text=copy.coda.visible-text -%}
+      <div id="hidden-text" class="collapse">
+        {%- include text.html text=copy.coda.hidden-text -%}
+      </div>
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#hidden-text">
+        {{ copy.button.read }}
+      </button>
     </div>
   </div>
 </div>

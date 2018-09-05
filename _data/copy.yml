@@ -8,9 +8,13 @@ intro:
 signup: "Sign up and create an account to get started."
 coda:
   title: "What is The Debt Collective?"
-  text:
+  visible-text:
     - "Today most of us are in debt. No matter how much we work or how hard we try to get ahead, we are barely getting by. We are struggling to get out from under student debt, medical debt, payday loans, housing debt, criminal justice debt, credit card debt, and more. For too long, we've experienced these debts in fear and isolation, while others get rich off of our monthly payments."
     - "The Debt Collective is here to say, no more!"
+  hidden-text:
+    - "We are a membership organization working to transform our individual financial struggles into a source of collective power. As the old saying goes, if you owe the bank $100,000 the bank owns you. But if you owe the bank $100 million, you own the bank. Together, we own the bank. We have already erased millions in medical and student debt via our Rolling Jubilee initiative and our first collective campaign won $600 million – and counting – in student debt discharges."
+    - "In the short term the Debt Collective offers services to empower people to dispute debts. Over the long term, we are conducting direct actions and campaigns of non-cooperation with the finance industry. We work toward broad debt cancellation while fighting for policies to end mass indebtedness, including free public higher education, universal healthcare, worker owned business, fair wages for everyone, decarceration and reparations for racial justice."
+    - "When we work together we can create conditions where everyone can thrive; where resources are shared; and where our economic system is organized in the interest of the many, not the few."
   caption: "The Debt Collective leverages collective power by offering debtors a shared platform for direct action."
 button:
   join: "Join Us"

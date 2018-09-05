@@ -1,7 +1,7 @@
 main:
   endpoint: "https://debtcollective.org"
 discourse:
-  endpoint: 'https://community.debtsyndicate.org'
+  endpoint: 'https://community.debtcollective.org'
   paths:
     campaigns: '/campaigns'
     collectives: '/collectives'

@@ -6,11 +6,15 @@ layout: default
 {% assign urls = site.data.urls %}
 {% assign login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
 
-<div class="Home container mt-5 landing">
+<div class="Home container landing_container mt-5 landing">
+
+  <!-- class/id names starting with `landing_` indicate that there is styling associated with that class name
+       (without the `landing_` prefix) for the rest of the site, and we should consider merging the styles
+       for consistent branding across the site -->
 
   <!-- intro is different for different sizes -->
-  {% assign intro_title = "<h1 class='tight'>" | append: copy.intro.title | append: "</h1>" %}
-  {% assign intro_subtitle = "<h2 id='join'>" | append: copy.intro.subtitle | append: "</h2>" %}
+  {% assign intro_title = "<h1 class='landing_tight tight'>" | append: copy.intro.title | append: "</h1>" %}
+  {% assign intro_subtitle = "<h2 id='join' class='landing_h2'>" | append: copy.intro.subtitle | append: "</h2>" %}
 
   <!-- mobile/narrow window (xs and sm) -->
   <div class="intro row d-flex d-md-none small-intro">
@@ -18,7 +22,7 @@ layout: default
       {{ intro_title }}
 
       {%- include text.html text=copy.intro.text -%}
-      <a class="btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
+      <a class="landing_btn btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
       <div class="landing-image"></div>
       {{ intro_subtitle }}
     </div>
@@ -32,20 +36,20 @@ layout: default
   <div class="intro row d-none d-md-flex d-lg-none medium-intro">
     <div class="col">
       {%- include text.html text=copy.intro.text -%}
-      <a class="btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
+      <a class="landing_btn btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
       {{ intro_subtitle }}
     </div>
   </div>
 
   <!-- lg and xl -->
   <div class="intro row d-none d-lg-flex large-intro">
-    <div class="col-5">
-        {{ intro_title }}
-        {%- include text.html text=copy.intro.text -%}
-        <a class="btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
-        {{ intro_subtitle }}
-      </div>
-      <div class="col-7 landing-image"></div>
+    <div class="col intro-text">
+      {{ intro_title }}
+      {%- include text.html text=copy.intro.text -%}
+      <a class="landing_btn btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
+      {{ intro_subtitle }}
+    </div>
+    <div class="col landing-image"></div>
   </div>
 
   <!-- end intro section -->
@@ -70,11 +74,15 @@ layout: default
       target=dispute_url -%}
   </div>
 
-  <div id="sign-up" class="row">
-    <div class="col">
-      <h3>{{ copy.signup }}</h3>
-      <a class="btn btn-primary" href={{ login_url }}>{{ copy.button.join }}</a>
+  <div id="sign-up-banner" class="row">
+    <div class="col-12">
+      <h3 class="landing_h3">{{ copy.signup }}</h3>
     </div>
+    <div class="col-lg-4 col-12"></div> <!-- placeholder to get button size right -->
+    <div class="col-lg-4 col-12">
+      <a class="landing_btn btn btn-primary" href={{ login_url }}>{{ copy.button.join }}</a>
+    </div>
+    <div class="col-lg-4 col-12"></div> <!-- placeholder to get button size right -->
   </div>
 
   <div class="row" id="coda">
@@ -86,12 +94,12 @@ layout: default
     </div>
 
     <div class="col-12 order-1 col-md-7 order-md-2">
-      <h2>{{ copy.coda.title }}</h2>
-      {%- include text.html text=copy.coda.visible-text -%}
+      <h2 class="landing_h2 coda-title">{{ copy.coda.title }}</h2>
+      {%- include text.html text=copy.coda.visible-text class="tall-lines coda-text" -%}
       <div id="hidden-text" class="collapse">
-        {%- include text.html text=copy.coda.hidden-text -%}
+        {%- include text.html text=copy.coda.hidden-text class="tall-lines coda-text" -%}
       </div>
-      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#hidden-text">
+      <button class="landing_btn btn btn-primary" type="button" data-toggle="collapse" data-target="#hidden-text">
         {{ copy.button.read }}
       </button>
     </div>

@@ -25,6 +25,14 @@ body {
   background-repeat: no-repeat;
 }
 
+p.tall-lines {
+  line-height: 33px;
+}
+
+h3 {
+  white-space: nowrap;
+}
+
 .small-intro {
   .landing-image {
     width: 100%;
@@ -43,7 +51,7 @@ body {
 
   p {
     font-size: 1rem;
-    line-height: 1.25rem;
+    line-height: 1.2;
   }
 }
 
@@ -57,40 +65,41 @@ body {
 
 .large-intro {
   .landing-image {
-    margin-left: -5rem;
+    margin-left: -4rem;
+    margin-right: -4rem;
     background-position-y: -10rem;
+    width: 300px;
     background-size: cover;
+  }
+
+  p {
+    max-width: 376px;
+  }
+
+  a {
+    margin-top: 1.5rem;
+    max-width: 376px;
+  }
+
+  h2 {
+    max-width: 410px;
   }
 }
 
 #learn-more {
   .learn-more-image {
-    height: 10rem;
-    width: 10rem;
-    margin: auto;
+    height: 13rem;
+    width: 13rem;
+    margin: 0 auto;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
   }
 
-  h3 {
-    white-space: nowrap;
-  }
-
   p {
-    min-height: 4rem;
-  }
-}
-
-#sign-up {
-  background-color: $text-0;
-  color: $white;
-  text-align: center;
-  padding: 3rem 100%;
-  margin: 3rem -100%;
-
-  a {
-    width: 40%;
+    min-height: 7.5rem;
+    border-bottom: 2px solid black;
+    margin-bottom: 1rem;
   }
 }
 
@@ -98,7 +107,8 @@ body {
   padding-top: 6rem;
 
   a {
-    width: 100%
+    width: 100%;
+    font-weight: 600;
   };
 
   h1 {
@@ -106,13 +116,17 @@ body {
   };
 
   #join {
-    margin-top: 4rem;
+    margin-top: 5rem;
   };
 
   .intro p:first-of-type {
-    margin-top: 1.8rem;
-    margin-bottom: 1.4rem;
+    margin-top: 1.5rem;
     font-weight: 600;
+  }
+
+  .intro p {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
   }
 }
 
@@ -120,25 +134,82 @@ a {
   margin: auto auto 2rem auto;
 }
 
+#sign-up-banner {
+  background-color: $text-0;
+  color: $white;
+  text-align: center;
+  padding: 3.4rem 100% 4rem 100%;
+  margin: 5.5rem -100%;
+
+  a {
+    margin-top: 1rem;
+  }
+}
+
 #coda {
   #coda-image {
     min-height: 300px;
+    height: 21rem;
+    width: 21rem;
+    margin: 0 auto;
     background-image: url("../assets/images/coda-image.png");
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
   }
 
   .caption-wrapper::before {
-    font-size: 3rem;
+    font-size: 3.7rem;
     content: '\201C';
   }
 
   .caption {
     display: block;
-    margin: -2.5rem 0 0 1.5rem;
-    font-size: 1.5em;
+    margin: -4.5rem 0 0 2.5rem;
+    font-size: 1.4em;
   }
 
   button {
    width: 80%;
   }
+
+  .coda-title {
+    max-width: 26rem;
+  }
+
+  .coda-text {
+    max-width: 32rem;
+  }
+}
+
+// see index.html comment
+
+.landing_tight {
+  font-size: 6.6rem;
+  line-height: .85;
+  font-weight: normal;
+}
+
+.landing_p {
+  line-height: normal;
+}
+
+.landing_btn {
+  background-color: #24ba9d;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  margin: 0;
+}
+
+.landing_h2 {
+  line-height: initial;
+}
+
+.landing_h3 {
+  line-height: 2;
+  margin-bottom: .1rem;
+}
+
+.landing_container {
+    max-width: 980px;
 }

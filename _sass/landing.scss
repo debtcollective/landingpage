@@ -5,8 +5,8 @@ html {
 body {
   height: 100%;
   overflow-x: hidden;
-  background: linear-gradient($bg-blue, $white 1000px), url(https://s3.amazonaws.com/tds-static/img/debtcollective/0.0.1/bg-tile.png);
-  background-repeat: no-repeat, repeat;
+  background: linear-gradient($bg-blue, $white 1000px);
+  background-repeat: no-repeat;
 }
 
 .wrapper {

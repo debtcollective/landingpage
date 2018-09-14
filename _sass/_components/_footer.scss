@@ -1,8 +1,9 @@
 .Footer {
   background-color: $text-0;
   margin-top: 3rem;
-  padding: 3rem 0 1rem 0;
+  padding: 3rem 0 2rem 0;
   color: $white;
+  font-weight: 600;
 
   &__list {
     @include only-less-medium {
@@ -14,8 +15,8 @@
     &-head {
       text-transform: uppercase;
       color: $text-2;
-      font-weight: 400;
       font-size: $font-size-base;
+      margin-bottom: 1rem;
     }
     &-item {
       &:not(:last-child) {
@@ -34,13 +35,13 @@
   }
 
   &__brand {
-    margin-top: 3rem;
+    margin-top: 5rem;
     img {
       height: 3.375rem;
     }
     &-copyright {
       color: $text-1;
-      font-size: $font-size-sm;
+      font-size: $font-size-base;
     }
     &-tos,
     &-copyright {
@@ -48,8 +49,13 @@
       white-space: nowrap;
     }
     &-tos {
+      a {
+        color: $white;
+        text-decoration: none;
+      }
     }
     &-copy-and-tos {
+      padding-left: 3.5rem;
     }
     @include at-least-small {
       &-tos {

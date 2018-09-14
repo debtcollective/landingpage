@@ -40,19 +40,19 @@
   }
 }
 
-@mixin at-least-x-small() {
+@mixin bigger-than-x-small() {
   @media (min-width: $w-xs) {
     @content;
   }
 }
 
-@mixin at-least-small() {
+@mixin bigger-than-small() {
   @media (min-width: $w-sm) {
     @content;
   }
 }
 
-@mixin at-least-medium() {
+@mixin bigger-than-medium() {
   @media (min-width: $w-md) {
     @content;
   }
@@ -64,14 +64,14 @@
   }
 }
 
-@mixin at-least-large() {
+@mixin bigger-than-large() {
   @media (min-width: $w-lg) {
     @content;
   }
 }
 
 @mixin page-margins() {
-  @include at-least-medium() {
+  @include bigger-than-medium() {
     margin-left: 8rem;
   }
   @include only-medium() {

@@ -57,7 +57,7 @@
     &-copy-and-tos {
       padding-left: 3.5rem;
     }
-    @include at-least-small {
+    @include bigger-than-small {
       &-tos {
         padding-left: 2.5rem;
       }

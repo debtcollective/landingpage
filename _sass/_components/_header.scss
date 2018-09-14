@@ -30,7 +30,7 @@
         }
       }
       &__nav {
-        @include at-least-medium {
+        @include bigger-than-medium {
           padding-top: 6rem;
         }
         @include only-less-large {

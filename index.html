@@ -16,8 +16,8 @@ layout: default
   {% assign intro_title = "<h1 class='landing_tight tight'>" | append: copy.intro.title | append: "</h1>" %}
   {% assign intro_subtitle = "<h2 id='join' class='landing_h2'>" | append: copy.intro.subtitle | append: "</h2>" %}
 
-  <!-- mobile/narrow window (xs and sm) -->
-  <div class="intro row d-flex d-md-none small-intro">
+  <!-- mobile/narrow window (xs) -->
+  <div class="intro row d-flex d-sm-none small-intro">
     <div class="col">
       {{ intro_title }}
 
@@ -28,12 +28,12 @@ layout: default
     </div>
   </div>
 
-  <!-- md -->
-  <div class="intro row d-none d-md-flex d-lg-none medium-intro">
+  <!-- md (not in use) -->
+  <div class="intro row d-none d-md-none d-lg-none medium-intro">
     <div class="col-5">{{ intro-title }}</div>
       <div class="col-7 landing-image"></div>
   </div>
-  <div class="intro row d-none d-md-flex d-lg-none medium-intro">
+  <div class="intro row d-none d-md-none d-lg-none medium-intro">
     <div class="col">
       {%- include text.html text=copy.intro.text -%}
       <a class="landing_btn btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
@@ -41,15 +41,17 @@ layout: default
     </div>
   </div>
 
-  <!-- lg and xl -->
-  <div class="intro row d-none d-lg-flex large-intro">
+  <!--sm md, lg and xl -->
+  <div class="intro row d-none d-sm-flex large-intro">
     <div class="col intro-text">
       {{ intro_title }}
       {%- include text.html text=copy.intro.text -%}
       <a class="landing_btn btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
       {{ intro_subtitle }}
     </div>
-    <div class="col landing-image"></div>
+    <div class="col landing-image-wrapper">
+      <img src="./assets/images/landing-image.png" height="1200" width="800" class="landing-image same-size" />
+    </div>
   </div>
 
   <!-- end intro section -->
@@ -57,11 +59,13 @@ layout: default
   <div id="learn-more" class="row">
     {% assign collectives_url =
       urls.discourse.endpoint | append: urls.discourse.collectives %}
-    {%- include learn-more.html heading="Organize" image="assets/images/handshake.png"
+    {%- include learn-more.html heading="Organize"
+      image="assets/images/handshake.png" image_size="11em 11em" image_position="50% 50%"
       text="Make plans to take collective action together."
       target=collectives_url -%}
 
-    {%- include learn-more.html heading="Stay Informed" image="assets/images/newspaper.png"
+    {%- include learn-more.html heading="Stay Informed"
+      image="assets/images/newspaper.png" image_size="9em 9em" image_position="50% 65%"
       text="Learn more about who is taking your money and how to build power to fight back."
       target=urls.power-report.endpoint -%}
 
@@ -69,7 +73,8 @@ layout: default
       urls.dispute-tools.endpoint | append: "/images/tools/hand.png" %}
     {% assign dispute_url =
       urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.dispute-tools %}
-    {%- include learn-more.html heading="Fight Back" image=image_url
+    {%- include learn-more.html heading="Fight Back"
+      image=image_url image_size="10em" image_position="50% 58%"
       text="Dispute your loans and stop predatory lenders."
       target=dispute_url -%}
   </div>

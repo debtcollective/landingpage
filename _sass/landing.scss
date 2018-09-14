@@ -64,25 +64,40 @@ h3 {
 }
 
 .large-intro {
+  .landing-image-wrapper {
+    overflow: visible;
+    width: 1px;
+    padding: 0;
+  }
+
   .landing-image {
-    margin-left: -4rem;
-    margin-right: -4rem;
-    background-position-y: -10rem;
-    width: 300px;
-    background-size: cover;
+    height: auto;
+    max-height: 62rem;
+    margin-left: -11rem;
+  }
+
+  .same-size {
+    min-width: 50rem;
+    margin-top: -11rem;
+  }
+
+
+  .proportional {
+    width: 169%;
+    margin-top: -7rem;
   }
 
   p {
-    max-width: 376px;
+    max-width: 23rem;
   }
 
   a {
     margin-top: 1.5rem;
-    max-width: 376px;
+    max-width: 23rem;
   }
 
   h2 {
-    max-width: 410px;
+    max-width: 26rem;
   }
 }
 
@@ -90,10 +105,13 @@ h3 {
   .learn-more-image {
     height: 13rem;
     width: 13rem;
-    margin: 0 auto;
-    background-size: contain;
+    margin: .5rem auto -.5rem auto;
     background-repeat: no-repeat;
-    background-position: center center;
+  }
+
+  h3 {
+    margin-top: -1.1rem;
+    margin-bottom: -.2rem;
   }
 
   p {
@@ -148,7 +166,7 @@ a {
 
 #coda {
   #coda-image {
-    min-height: 300px;
+    min-height: 19rem;
     height: 21rem;
     width: 21rem;
     margin: 0 auto;

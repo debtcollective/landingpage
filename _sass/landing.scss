@@ -5,8 +5,8 @@ html {
 body {
   height: 100%;
   overflow-x: hidden;
-  background: linear-gradient($bg-blue, $white 1000px);
-  background-repeat: no-repeat;
+  background: linear-gradient($bg-blue, $white), $white;
+  background-repeat: no-repeat, repeat;
 }
 
 .wrapper {

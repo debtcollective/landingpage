@@ -17,40 +17,31 @@ layout: default
   {% assign intro_subtitle = "<h2 id='join' class='landing_h2'>" | append: copy.intro.subtitle | append: "</h2>" %}
 
   <!-- mobile/narrow window (xs) -->
-  <div class="intro row d-flex d-sm-none small-intro">
+  <div class="intro row d-flex d-md-none small-intro">
     <div class="col">
       {{ intro_title }}
 
       {%- include text.html text=copy.intro.text -%}
       <a class="landing_btn btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
-      <div class="landing-image"></div>
+      <div class="landing-image-wrapper">
+        <!-- diff sizes of the landing-image so load times and clarity are good -->
+        <img class="landing-image d-sm-none" src="./assets/images/landing-image-mobile.png" height="395" width="300" />
+        <img class="landing-image d-none d-sm-flex d-md-none" src="./assets/images/landing-image-medium.png" height="750" width="600" />
+      </div>
       {{ intro_subtitle }}
     </div>
   </div>
 
-  <!-- md (not in use) -->
-  <div class="intro row d-none d-md-none d-lg-none medium-intro">
-    <div class="col-5">{{ intro-title }}</div>
-      <div class="col-7 landing-image"></div>
-  </div>
-  <div class="intro row d-none d-md-none d-lg-none medium-intro">
-    <div class="col">
-      {%- include text.html text=copy.intro.text -%}
-      <a class="landing_btn btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
-      {{ intro_subtitle }}
-    </div>
-  </div>
-
-  <!--sm md, lg and xl -->
-  <div class="intro row d-none d-sm-flex large-intro">
+  <!-- sm, md, lg and xl -->
+  <div class="intro row d-none d-md-flex large-intro">
     <div class="col intro-text">
       {{ intro_title }}
-      {%- include text.html text=copy.intro.text -%}
+      {%- include text.html text=copy.intro.text class="tall-lines" -%}
       <a class="landing_btn btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
       {{ intro_subtitle }}
     </div>
     <div class="col landing-image-wrapper">
-      <img src="./assets/images/landing-image.png" height="1200" width="800" class="landing-image same-size" />
+      <img src="./assets/images/landing-image-desktop.png" height="1200" width="800" class="landing-image" />
     </div>
   </div>
 
@@ -60,12 +51,12 @@ layout: default
     {% assign collectives_url =
       urls.discourse.endpoint | append: urls.discourse.collectives %}
     {%- include learn-more.html heading="Organize"
-      image="assets/images/handshake.png" image_size="11em 11em" image_position="50% 50%"
+      image="assets/images/handshake.png" image_size="85%" image_position="50% 50%"
       text="Make plans to take collective action together."
       target=collectives_url -%}
 
     {%- include learn-more.html heading="Stay Informed"
-      image="assets/images/newspaper.png" image_size="9em 9em" image_position="50% 65%"
+      image="assets/images/newspaper.png" image_size="70%" image_position="50% 50%"
       text="Learn more about who is taking your money and how to build power to fight back."
       target=urls.power-report.endpoint -%}
 
@@ -74,7 +65,7 @@ layout: default
     {% assign dispute_url =
       urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.dispute-tools %}
     {%- include learn-more.html heading="Fight Back"
-      image=image_url image_size="10em" image_position="50% 58%"
+      image=image_url image_size="77%" image_position="50% 58%"
       text="Dispute your loans and stop predatory lenders."
       target=dispute_url -%}
   </div>
@@ -83,11 +74,11 @@ layout: default
     <div class="col-12">
       <h3 class="landing_h3">{{ copy.signup }}</h3>
     </div>
-    <div class="col-lg-4 col-12"></div> <!-- placeholder to get button size right -->
-    <div class="col-lg-4 col-12">
+    <div class="col-sm-4 col-12"></div> <!-- placeholder to get button size right -->
+    <div class="col-sm-4 col-12">
       <a class="landing_btn btn btn-primary" href={{ login_url }}>{{ copy.button.join }}</a>
     </div>
-    <div class="col-lg-4 col-12"></div> <!-- placeholder to get button size right -->
+    <div class="col-sm-4 col-12"></div> <!-- placeholder to get button size right -->
   </div>
 
   <div class="row" id="coda">

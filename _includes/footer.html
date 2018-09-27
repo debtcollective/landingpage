@@ -1,13 +1,15 @@
+{% assign urls = site.data.urls %}
+
 <div class="Footer">
   <div class="Footer__links container-fluid">
     <div class="row">
       <div class="Footer__list col-lg-2 col-md-3 col-sm-6 col-6">
         <h6 class="Footer__list-head">Organize</h6>
         <div class="Footer__list-item">
-          <a href="{{ endpoint | append: paths.collectives }}">Collectives</a>
+          <a href="{{ discourse.endpoint | append: discourse.paths.collectives }}">Collectives</a>
         </div>
         <div class="Footer__list-item">
-          <a href="{{ endpoint | append: paths.campaigns }}">Campaigns</a>
+          <a href="{{ discourse.endpoint | append: discourse.paths.campaigns }}">Campaigns</a>
         </div>
         <!-- uncomment when the debt map is ready! https://github.com/debtcollective/parent/issues/155#issuecomment-396116381
         <div class="Footer__list-item">
@@ -18,34 +20,34 @@
       <div class="Footer__list col-lg-2 col-md-3 col-sm-6 col-6">
         <h6 class="Footer__list-head">Take Action</h6>
         <div class="Footer__list-item">
-          <a href="{{ endpoint | append: paths.events }}">Events</a>
+          <a href="{{ discourse.endpoint | append: discourse.paths.events }}">Events</a>
         </div>
         <div class="Footer__list-item">
           <a href="https://tools.debtcollective.org/dispute-tools">Dispute your Debt</a>
         </div>
         <div class="Footer__list-item">
-          <a href="{{ endpoint | append: paths.campaigns }}">Campaigns</a>
+          <a href="{{ discourse.endpoint | append: discourse.paths.campaigns }}">Campaigns</a>
         </div>
       </div>
       <div class="Footer__list col-lg-2 col-md-3 col-sm-6 col-6">
         <h6 class="Footer__list-head">Learn</h6>
         <div class="Footer__list-item">
-          <a href="/">The Power Report</a>
+          <a href="{{ urls.power-report.endpoint }}">The Power Report</a>
         </div>
         <div class="Footer__list-item">
-          <a href="/about">About Us</a>
+          <a href="{{ urls.power-report.endpoint | append: '/about' }}">About Us</a>
         </div>
         <div class="Footer__list-item">
-          <a href="https://wiki.debtcollective.org">Community Wiki</a>
+          <a href="{{ urls.wiki.endpoint }}">Community Wiki</a>
         </div>
       </div>
       <div class="Footer__list col-lg-2 col-md-3 col-sm-6 col-6">
         <h6 class="Footer__list-head">More</h6>
         <div class="Footer__list-item">
-          <a href="https://tools.debtcollective.org/contact">Contact</a>
+          <a href="{{ urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.contact }}">Contact</a>
         </div>
         <div class="Footer__list-item">
-          <a href="https://tools.debtcollective.org/?donate">Donate</a>
+          <a href="{{ urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.donate }}">Donate</a>
         </div>
         <div class="Footer__list-item">
           <a href="https://github.com/debtcollective">Open Source</a>

@@ -10,11 +10,11 @@ discourse:
 s3:
   endpoint: 'https://s3.amazonaws.com/tds-static'
 dispute-tools:
-  endpoint: 'https://debtcollective.org'
+  endpoint: 'https://tools.debtcollective.org'
   paths:
     dispute-tools: '/dispute-tools'
     contact: '/contact'
-    donate: '/donate'
+    donate: '/?donate'
 wiki:
   endpoint: 'https://wiki.debtcollective.org'
 power-report:

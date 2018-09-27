@@ -7,15 +7,20 @@ discourse:
     collectives: '/collectives'
     events: '/calendar'
     login: '/login'
-s3:
+s3-static:
   endpoint: 'https://s3.amazonaws.com/tds-static'
+  paths:
+    footer-logo: '/img/debtcollective/0.0.1/DC-logo_FULL_DARK_CUTOUTfoot_@3x.png'
 dispute-tools:
   endpoint: 'https://tools.debtcollective.org'
   paths:
-    dispute-tools: '/dispute-tools'
+    dispute-tools: '/tools'
     contact: '/contact'
     donate: '/?donate'
+    tos: '/terms'
 wiki:
   endpoint: 'https://wiki.debtcollective.org'
 power-report:
   endpoint: 'https://powerreport.debtcollective.org'
+repository:
+  endpoint: 'https://github.com/debtcollective'

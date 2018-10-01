@@ -235,6 +235,16 @@ a {
   .coda-text {
     max-width: 32rem;
   }
+
+  ol {
+    list-style-type: none;
+  }
+
+  li {
+    width: 8rem;
+    float: left;
+    margin-bottom: 2rem;
+  }
 }
 
 // see index.html comment

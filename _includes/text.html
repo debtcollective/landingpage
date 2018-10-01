@@ -1,3 +1,5 @@
+<div class="{{ include.class }} landing_p">
 {% for paragraph in include.text %}
-  <p class="{{ include.class }} landing_p">{{paragraph}}</p>
+  {{ paragraph }}
 {% endfor %}
+</div>

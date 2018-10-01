@@ -60,12 +60,10 @@ layout: default
       text="Learn more about who is taking your money and how to build power to fight back."
       target=urls.power-report.endpoint -%}
 
-    {% assign image_url =
-      urls.dispute-tools.endpoint | append: "/images/tools/hand.png" %}
     {% assign dispute_url =
       urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.dispute-tools %}
     {%- include learn-more.html heading="Fight Back"
-      image=image_url image_size="77%" image_position="50% 58%"
+      image="assets/images/fist.png" image_size="77%" image_position="50% 58%"
       text="Dispute your loans and stop predatory lenders."
       target=dispute_url -%}
   </div>

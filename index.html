@@ -88,7 +88,7 @@ layout: default
     </div>
 
     <div class="col-12 order-1 col-md-7 order-md-2">
-      <h2 class="landing_h2 coda-title">{{ copy.coda.title }}</h2>
+      <h2 class="landing_h2 coda-title" id="about">{{ copy.coda.title }}</h2>
       {%- include text.html text=copy.coda.visible-text class="tall-lines coda-text" -%}
       <div id="hidden-text" class="collapse">
         {%- include text.html text=copy.coda.hidden-text class="tall-lines coda-text" -%}

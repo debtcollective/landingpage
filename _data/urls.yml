@@ -14,7 +14,7 @@ s3-static:
 dispute-tools:
   endpoint: "https://tools.debtcollective.org"
   paths:
-    dispute-tools: "/tools"
+    dispute-tools: "/dispute-tools"
     contact: "/contact"
     donate: "/?donate"
     tos: "https://community.debtcollective.org/tos"

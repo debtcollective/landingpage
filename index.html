@@ -53,19 +53,19 @@ layout: default
     {%- include learn-more.html heading="Organize"
       image="assets/images/handshake.png" image_size="85%" image_position="50% 50%"
       text="Make plans to take collective action together."
-      target=collectives_url -%}
+      href=collectives_url -%}
 
     {%- include learn-more.html heading="Stay Informed"
       image="assets/images/newspaper.png" image_size="70%" image_position="50% 50%"
       text="Learn more about who is taking your money and how to build power to fight back."
-      target=urls.power-report.endpoint -%}
+      href=urls.power-report.endpoint -%}
 
     {% assign dispute_url =
       urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.dispute-tools %}
     {%- include learn-more.html heading="Fight Back"
       image="assets/images/fist.png" image_size="77%" image_position="50% 58%"
       text="Dispute your loans and stop predatory lenders."
-      target=dispute_url -%}
+      href=dispute_url -%}
   </div>
 
   <div id="sign-up-banner" class="row">

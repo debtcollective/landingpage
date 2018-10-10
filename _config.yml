@@ -1,6 +1,13 @@
 ---
 title: The Debt Collective
 timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 permalink: pretty
 author: The Debt Collective
 email: organizers@debtcollective.org
@@ -19,26 +26,46 @@ exclude:
 - ".circleci"
 copy:
   intro:
-    title: "Organize. Resist. Rebuild."
+    title: Organize. Resist. Rebuild.
     text:
-      - "<p>You are not a loan.</p>"
-      - "<p>Join the Debt Collective to fight economic exploitation! Here you can dispute your debts, challenge creditors, and join others to organize campaigns, direct actions, and financial disobedience. Together we can build a new economy where no one has to go into debt to meet their basic needs.</p>"
-    subtitle: "Join the Community of Fellow Debtors."
-  # copy for the learn more section is in ./learn-more.yml
-  signup: "Sign up and create an account to get started."
+    - "<p>You are not a loan.</p>"
+    - "<p>Join the Debt Collective to fight economic exploitation! Here you can dispute
+      your debts, challenge creditors, and join others to organize campaigns, direct
+      actions, and financial disobedience. Together we can build a new economy where
+      no one has to go into debt to meet their basic needs.</p>"
+    subtitle: Join the Community of Fellow Debtors.
+  signup: Sign up and create an account to get started.
   coda:
-    title: "What is The Debt Collective?"
+    title: What is The Debt Collective?
     visible-text:
-      - "<p>Today most of us are in debt. No matter how much we work or how hard we try to get ahead, we are barely getting by. We are struggling to get out from under student debt, medical debt, payday loans, housing debt, criminal justice debt, credit card debt, and more. For too long, we've experienced these debts in fear and isolation, while others get rich off of our monthly payments.</p>"
-      - "<p>The Debt Collective is here to say, no more!</p>"
+    - "<p>Today most of us are in debt. No matter how much we work or how hard we
+      try to get ahead, we are barely getting by. We are struggling to get out from
+      under student debt, medical debt, payday loans, housing debt, criminal justice
+      debt, credit card debt, and more. For too long, we've experienced these debts
+      in fear and isolation, while others get rich off of our monthly payments.</p>"
+    - "<p>The Debt Collective is here to say, no more!</p>"
     hidden-text:
-      - "<p>We are a membership organization working to transform our individual financial struggles into a source of collective power. As the old saying goes, if you owe the bank $100,000 the bank owns you. But if you owe the bank $100 million, you own the bank. Together, we own the bank. We have already erased millions in medical and student debt via our Rolling Jubilee initiative and our first collective campaign won $600 million – and counting – in student debt discharges.</p>"
-      - "<p>In the short term the Debt Collective offers services to empower people to dispute debts. Over the long term, we are conducting direct actions and campaigns of non-cooperation with the finance industry. We work toward broad debt cancellation while fighting for policies to end mass indebtedness, including free public higher education, universal healthcare, worker owned business, fair wages for everyone, decarceration and reparations for racial justice.</p>"
-      - "<p>When we work together we can create conditions where everyone can thrive; where resources are shared; and where our economic system is organized in the interest of the many, not the few.</p>"
-      - "<p>The Debt Collective was founded by:</p>"
-      - "<ol><li>Hannah Appel</li><li>Thomas Gokey</li><li>Laura Hanna</li><li>Luke Herrine</li><li>Ann Larson</li><li>Astra Taylor</li></ol>"
-    caption: "The Debt Collective leverages collective power by offering debtors a shared platform for direct action."
+    - "<p>We are a membership organization working to transform our individual financial
+      struggles into a source of collective power. As the old saying goes, if you
+      owe the bank $100,000 the bank owns you. But if you owe the bank $100 million,
+      you own the bank. Together, we own the bank. We have already erased millions
+      in medical and student debt via our Rolling Jubilee initiative and our first
+      collective campaign won $600 million – and counting – in student debt discharges.</p>"
+    - "<p>In the short term the Debt Collective offers services to empower people
+      to dispute debts. Over the long term, we are conducting direct actions and campaigns
+      of non-cooperation with the finance industry. We work toward broad debt cancellation
+      while fighting for policies to end mass indebtedness, including free public
+      higher education, universal healthcare, worker owned business, fair wages for
+      everyone, decarceration and reparations for racial justice.</p>"
+    - "<p>When we work together we can create conditions where everyone can thrive;
+      where resources are shared; and where our economic system is organized in the
+      interest of the many, not the few.</p>"
+    - "<p>The Debt Collective was founded by:</p>"
+    - "<ol><li>Hannah Appel</li><li>Thomas Gokey</li><li>Laura Hanna</li><li>Luke
+      Herrine</li><li>Ann Larson</li><li>Astra Taylor</li></ol>"
+    caption: The Debt Collective leverages collective power by offering debtors a
+      shared platform for direct action.
   button:
-    join: "Join Us"
-    read: "Read More"
-    learn: "Learn more"
+    join: Join Us
+    read: Read More
+    learn: Learn more

@@ -19,7 +19,7 @@ dispute-tools:
     donate: "/?donate"
     tos: "https://community.debtcollective.org/tos"
 wiki:
-  endpoint: "https://wiki.debtcollective.org"
+  endpoint: "http://wiki.debtcollective.org"
 power-report:
   endpoint: "https://powerreport.debtcollective.org"
 repository:

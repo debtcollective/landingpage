@@ -62,10 +62,8 @@
     <div class="row">
       <div class="col-lg-2 col-md-3 col-sm-12 col-12 Footer__brand-logo">
         <a href="/">
-          <img alt="The Debt Collective"
-               src="{{ urls.s3-static.endpoint | append: urls.s3-static.paths.footer-logo }}"
-               height="60" width="175"
-          />
+          <img alt="The Debt Collective" src="{{ urls.s3-static.endpoint | append: urls.s3-static.paths.footer-logo }}"
+            height="60" width="175" />
         </a>
       </div>
       <div class="col-lg-10 col-md-9 col-sm-12 col-12 pt-3 Footer__brand-copy-and-tos">
@@ -73,7 +71,7 @@
           Copyright {{ 'now' | date: "%Y" }}
         </div>
         <div class="Footer__brand-tos">
-          <a href="{{ urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.tos }}">Terms and Conditions</a>
+          <a href="{{ discourse.endpoint | append: discourse.paths.tos }}">Terms and Conditions</a>
         </div>
       </div>
     </div>

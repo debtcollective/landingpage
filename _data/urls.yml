@@ -3,10 +3,11 @@ main:
 discourse:
   endpoint: "https://community.debtcollective.org"
   paths:
-    campaigns: "https://community.debtcollective.org"
-    collectives: "https://community.debtcollective.org"
-    events: "https://community.debtcollective.org"
+    campaigns: "/"
+    collectives: "/"
+    events: "/"
     login: "/login"
+    tos: "/tos"
 s3-static:
   endpoint: "https://s3.amazonaws.com/tds-static"
   paths:
@@ -17,7 +18,6 @@ dispute-tools:
     dispute-tools: "/dispute-tools"
     contact: "/contact"
     donate: "/?donate"
-    tos: "https://community.debtcollective.org/tos"
 wiki:
   endpoint: "http://wiki.debtcollective.org"
 power-report:

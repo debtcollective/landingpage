@@ -6,21 +6,16 @@
       <div class="Footer__list col-lg-2 col-md-3 col-sm-6 col-6">
         <h6 class="Footer__list-head">Organize</h6>
         <div class="Footer__list-item">
-          <a href="{{ discourse.endpoint | append: discourse.paths.collectives }}">Collectives</a>
+          <a href="{{ urls.discourse.endpoint | append: urls.discourse.paths.collectives }}">Collectives</a>
         </div>
         <div class="Footer__list-item">
-          <a href="{{ discourse.endpoint | append: discourse.paths.campaigns }}">Campaigns</a>
+          <a href="{{ urls.discourse.endpoint | append: urls.discourse.paths.campaigns }}">Campaigns</a>
         </div>
-        <!-- uncomment when the debt map is ready! https://github.com/debtcollective/parent/issues/155#issuecomment-396116381
-        <div class="Footer__list-item">
-          <a href="#debt-map">Debt Map</a>
-        </div>
-        -->
       </div>
       <div class="Footer__list col-lg-2 col-md-3 col-sm-6 col-6">
         <h6 class="Footer__list-head">Take Action</h6>
         <div class="Footer__list-item">
-          <a href="{{ discourse.endpoint | append: discourse.paths.events }}">Events</a>
+          <a href="{{ urls.discourse.endpoint | append: urls.discourse.paths.events }}">Events</a>
         </div>
         <div class="Footer__list-item">
           <a href="{{ urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.dispute-tools }}">
@@ -28,7 +23,7 @@
           </a>
         </div>
         <div class="Footer__list-item">
-          <a href="{{ discourse.endpoint | append: discourse.paths.campaigns }}">Campaigns</a>
+          <a href="{{ urls.discourse.endpoint | append: urls.discourse.paths.campaigns }}">Campaigns</a>
         </div>
       </div>
       <div class="Footer__list col-lg-2 col-md-3 col-sm-6 col-6">
@@ -37,7 +32,7 @@
           <a href="{{ urls.power-report.endpoint }}">The Power Report</a>
         </div>
         <div class="Footer__list-item">
-          <a href="/#about">About Us</a>
+          <a href="/#about" data-toggle="collapse" data-target="#hidden-text">About Us</a>
         </div>
         <div class="Footer__list-item">
           <a href="{{ urls.wiki.endpoint }}">Community Wiki</a>
@@ -71,7 +66,7 @@
           Copyright {{ 'now' | date: "%Y" }}
         </div>
         <div class="Footer__brand-tos">
-          <a href="{{ discourse.endpoint | append: discourse.paths.tos }}">Terms and Conditions</a>
+          <a href="{{ urls.discourse.endpoint | append: urls.discourse.paths.tos }}">Terms and Conditions</a>
         </div>
       </div>
     </div>

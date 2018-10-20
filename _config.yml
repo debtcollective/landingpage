@@ -14,10 +14,10 @@ email: organizers@debtcollective.org
 description: The Debt Collective
 rss: rss
 discourse:
-  endpoint: https://community.debtsyndicate.org
+  endpoint: https://community.debtcollective.org
   paths:
-    campaigns: "/campaigns"
-    collectives: "/collectives"
+    campaigns: "/"
+    collectives: "/"
     events: "/calendar"
 plugins:
 - jekyll-seo-tag

@@ -1,11 +1,11 @@
 main:
   endpoint: "https://debtcollective.org"
 discourse:
-  endpoint: "https://community.debtcollective.org"
+  endpoint: https://community.debtcollective.org
   paths:
     campaigns: "/"
     collectives: "/"
-    events: "/"
+    events: "/calendar"
     login: "/login"
     tos: "/tos"
 s3-static:

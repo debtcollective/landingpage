@@ -6,24 +6,32 @@
       <div class="Footer__list col-lg-2 col-md-3 col-sm-6 col-6">
         <h6 class="Footer__list-head">Organize</h6>
         <div class="Footer__list-item">
-          <a href="{{ urls.discourse.endpoint | append: urls.discourse.paths.collectives }}">Collectives</a>
+          <a
+            href="{{ urls.discourse.endpoint | append: urls.discourse.paths.collectives }}"
+            >Collectives</a
+          >
         </div>
         <div class="Footer__list-item">
-          <a href="{{ urls.discourse.endpoint | append: urls.discourse.paths.campaigns }}">Campaigns</a>
+          <a
+            href="{{ urls.discourse.endpoint | append: urls.discourse.paths.campaigns }}"
+            >Campaigns</a
+          >
         </div>
       </div>
       <div class="Footer__list col-lg-2 col-md-3 col-sm-6 col-6">
         <h6 class="Footer__list-head">Take Action</h6>
         <div class="Footer__list-item">
-          <a href="{{ urls.discourse.endpoint | append: urls.discourse.paths.events }}">Events</a>
+          <a
+            href="{{ urls.discourse.endpoint | append: urls.discourse.paths.events }}"
+            >Events</a
+          >
         </div>
         <div class="Footer__list-item">
-          <a href="{{ urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.dispute-tools }}">
+          <a
+            href="{{ urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.dispute-tools }}"
+          >
             Dispute your Debt
           </a>
-        </div>
-        <div class="Footer__list-item">
-          <a href="{{ urls.discourse.endpoint | append: urls.discourse.paths.campaigns }}">Campaigns</a>
         </div>
       </div>
       <div class="Footer__list col-lg-2 col-md-3 col-sm-6 col-6">
@@ -32,7 +40,9 @@
           <a href="{{ urls.power-report.endpoint }}">The Power Report</a>
         </div>
         <div class="Footer__list-item">
-          <a href="/#about" data-toggle="collapse" data-target="#hidden-text">About Us</a>
+          <a href="/#about" data-toggle="collapse" data-target="#hidden-text"
+            >About Us</a
+          >
         </div>
         <div class="Footer__list-item">
           <a href="{{ urls.wiki.endpoint }}">Community Wiki</a>
@@ -41,10 +51,16 @@
       <div class="Footer__list col-lg-2 col-md-3 col-sm-6 col-6">
         <h6 class="Footer__list-head">More</h6>
         <div class="Footer__list-item">
-          <a href="{{ urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.contact }}">Contact</a>
+          <a
+            href="{{ urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.contact }}"
+            >Contact</a
+          >
         </div>
         <div class="Footer__list-item">
-          <a href="{{ urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.donate }}">Donate</a>
+          <a
+            href="{{ urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.donate }}"
+            >Donate</a
+          >
         </div>
         <div class="Footer__list-item">
           <a href="{{ urls.repository.endpoint }}">Open Source</a>
@@ -57,16 +73,25 @@
     <div class="row">
       <div class="col-lg-2 col-md-3 col-sm-12 col-12 Footer__brand-logo">
         <a href="/">
-          <img alt="The Debt Collective" src="{{ urls.s3-static.endpoint | append: urls.s3-static.paths.footer-logo }}"
-            height="60" width="175" />
+          <img
+            alt="The Debt Collective"
+            src="{{ urls.s3-static.endpoint | append: urls.s3-static.paths.footer-logo }}"
+            height="60"
+            width="175"
+          />
         </a>
       </div>
-      <div class="col-lg-10 col-md-9 col-sm-12 col-12 pt-3 Footer__brand-copy-and-tos">
+      <div
+        class="col-lg-10 col-md-9 col-sm-12 col-12 pt-3 Footer__brand-copy-and-tos"
+      >
         <div class="Footer__brand-copyright">
-          Copyright {{ 'now' | date: "%Y" }}
+          Copyright {{ "now" | date: "%Y" }}
         </div>
         <div class="Footer__brand-tos">
-          <a href="{{ urls.discourse.endpoint | append: urls.discourse.paths.tos }}">Terms and Conditions</a>
+          <a
+            href="{{ urls.discourse.endpoint | append: urls.discourse.paths.tos }}"
+            >Terms and Conditions</a
+          >
         </div>
       </div>
     </div>

@@ -1,22 +1,32 @@
 {% assign urls = site.data.urls %}
 
 <div id="debt-collective-header"></div>
-<script>; Vue.component(DebtCollectiveHeader.name, DebtCollectiveHeader); new Vue({
-    el: '#debt-collective-header', render: function (h) {
-      return h('debt-collective-header', {
+<script>
+  Vue.component(DebtCollectiveHeader.name, DebtCollectiveHeader);
+  new Vue({
+    el: "#debt-collective-header",
+    render: function(h) {
+      return h("debt-collective-header", {
         attrs: {
-          'header-links': [
-            { href: '{{ urls.dispute-tools.endpoint }}', text: 'Dispute Your Debt' },
-            { href: '{{ urls.discourse.endpoint }}', text: 'Campaigns' },
-            { href: '{{ urls.discourse.endpoint }}', text: 'Events' },
+          "header-links": [
+            {
+              href: "{{ urls.dispute-tools.endpoint }}",
+              text: "Dispute Your Debt"
+            },
+            { href: "{{ urls.discourse.endpoint }}", text: "Community" },
+            { href: "{{ urls.discourse.endpoint }}", text: "Events" }
           ],
-          'dropdown-links': [
-            { href: '{{ urls.power-report.endpoint }}', text: 'The Power Report' },
-            { href: '{{ urls.wiki.endpoint }}', text: 'Community Wiki' },
-            { href: '/#about', text: 'About the Debt Collective' }
+          "dropdown-links": [
+            {
+              href: "{{ urls.power-report.endpoint }}",
+              text: "The Power Report"
+            },
+            { href: "{{ urls.wiki.endpoint }}", text: "Wiki" },
+            { href: "/#about", text: "About the Debt Collective" }
           ],
-          'discourse-endpoint': '{{ urls.discourse.endpoint }}'
+          "discourse-endpoint": "{{ urls.discourse.endpoint }}"
         }
-      })
+      });
     }
-  });</script>
+  });
+</script>

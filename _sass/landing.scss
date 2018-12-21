@@ -21,7 +21,7 @@ body {
 }
 
 p.tall-lines {
-  line-height: 2.1
+  line-height: 2.1;
 }
 
 h3 {
@@ -44,8 +44,8 @@ h3 {
 
   h1 {
     font-size: 4rem;
-    line-height: .9;
-    margin-bottom: .75rem;
+    line-height: 0.9;
+    margin-bottom: 0.75rem;
   }
 
   #join {
@@ -59,7 +59,7 @@ h3 {
   p {
     font-size: 1rem;
     line-height: 2.25;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   a {
@@ -108,11 +108,11 @@ h3 {
   .learn-more-image {
     height: 13rem;
     width: 13rem;
-    margin: .5rem auto -.5rem auto;
+    margin: 0.5rem auto -0.5rem auto;
     background-repeat: no-repeat;
 
     @include only-x-small {
-      margin-top: -.5rem;
+      margin-top: -0.5rem;
       width: 50%;
       padding-bottom: 50%; // this in combination with width 50% keeps the div square (!)
     }
@@ -120,7 +120,7 @@ h3 {
 
   h3 {
     margin-top: -1.1rem;
-    margin-bottom: -.2rem;
+    margin-bottom: -0.2rem;
 
     @include only-x-small {
       margin-top: -2rem;
@@ -135,7 +135,7 @@ h3 {
 
     @include only-less-medium {
       min-height: auto;
-      padding-bottom: .75rem;
+      padding-bottom: 0.75rem;
     }
   }
 }
@@ -150,19 +150,15 @@ h3 {
   a {
     width: 100%;
     font-weight: 600;
-  };
+  }
 
   h1 {
     width: 1px; // forces the words to be on different lines
-  };
+  }
 
   .intro p:first-of-type {
     font-weight: 600;
   }
-}
-
-a {
-  margin: auto auto 2rem auto;
 }
 
 #sign-up-banner {
@@ -204,7 +200,7 @@ a {
 
   .caption-wrapper::before {
     font-size: 3.7rem;
-    content: '\201C';
+    content: "\201C";
   }
 
   .caption {
@@ -214,12 +210,12 @@ a {
   }
 
   button {
-   width: 80%;
+    width: 80%;
 
-   @include only-less-large {
-     width: 100%;
-     margin-bottom: 3rem;
-   }
+    @include only-less-large {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
   }
 
   .coda-title {
@@ -251,7 +247,7 @@ a {
 
 .landing_tight {
   font-size: 6.6rem;
-  line-height: .85;
+  line-height: 0.85;
   font-weight: normal;
 }
 
@@ -272,9 +268,9 @@ a {
 
 .landing_h3 {
   line-height: 2;
-  margin-bottom: .1rem;
+  margin-bottom: 0.1rem;
 }
 
 .landing_container {
-    max-width: 980px;
+  max-width: 980px;
 }

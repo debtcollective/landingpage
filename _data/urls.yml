@@ -17,7 +17,7 @@ dispute-tools:
   paths:
     dispute-tools: "/dispute-tools"
     contact: "/contact"
-    donate: "/?donate"
+    donate: "/donate"
 wiki:
   endpoint: "http://wiki.debtcollective.org"
 power-report:

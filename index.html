@@ -6,44 +6,46 @@ layout: default
 {% assign urls = site.data.urls %}
 {% assign login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
 
-<div class="Home container landing_container mt-5 landing">
+<div id="home" class="container landing_container mt-5 landing">
 
   <!-- class/id names starting with `landing_` indicate that there is styling associated with that class name
        (without the `landing_` prefix) for the rest of the site, and we should consider merging the styles
        for consistent branding across the site -->
 
   <!-- intro is different for different sizes -->
-  {% assign intro_title = "<h1 class='landing_tight tight'>" | append: copy.intro.title | append: "</h1>" %}
-  {% assign intro_subtitle = "<h2 id='join' class='landing_h2'>" | append: copy.intro.subtitle | append: "</h2>" %}
+  {% assign intro_title = "<h1 class='h1 lead-variant mb-4'>" | append: copy.intro.title | append: "</h1>" %}
+  {% assign intro_cta_copy = "<h2 id='join' class='h1 text-center'>" | append: copy.intro.subtitle | append: "</h2>" %}
 
   <!-- mobile/narrow window (xs) -->
-  <div class="intro row d-flex d-md-none small-intro">
+  <section class="row">
     <div class="col">
-      {{ intro_title }}
-
-      {%- include text.html text=copy.intro.text -%}
-      <a class="landing_btn btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
-      <div class="landing-image-wrapper">
-        <!-- diff sizes of the landing-image so load times and clarity are good -->
-        <img class="landing-image d-sm-none" src="assets/images/landing-image-mobile.png" height="395" width="300" />
-        <img class="landing-image d-none d-sm-flex d-md-none" src="assets/images/landing-image-medium.png" height="750" width="600" />
+      <div class="intro-section__content-wrapper">
+        {{ intro_title }}
+  
+        <p class="subtitle mb-4">{{ copy.intro.text }}</p>
+        <a class="btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
+        <div class="landing-image-wrapper">
+          <!-- diff sizes of the landing-image so load times and clarity are good -->
+          <img class="landing-image d-sm-none" src="assets/images/landing-image-mobile.png" height="395" width="300" />
+          <img class="landing-image d-none d-sm-flex d-md-none" src="assets/images/landing-image-medium.png" height="750" width="600" />
+        </div>
+        {{ intro_cta_copy }}
       </div>
-      {{ intro_subtitle }}
     </div>
-  </div>
+  </section>
 
   <!-- sm, md, lg and xl -->
-  <div class="intro row d-none d-md-flex large-intro">
+  <section class="intro row d-none d-md-flex large-intro">
     <div class="col intro-text">
       {{ intro_title }}
-      {%- include text.html text=copy.intro.text class="tall-lines" -%}
+      <p class="subtitle">{{ copy.intro.text }}</p>
       <a class="landing_btn btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
-      {{ intro_subtitle }}
+      {{ intro_cta_copy }}
     </div>
     <div class="col landing-image-wrapper">
       <img src="assets/images/landing-image-desktop.png" height="1200" width="800" class="landing-image" />
     </div>
-  </div>
+  </section>
 
   <!-- end intro section -->
 

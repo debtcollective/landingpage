@@ -28,45 +28,6 @@ h3 {
   white-space: nowrap;
 }
 
-.small-intro {
-  margin-left: -22px;
-  margin-right: -22px;
-
-  .landing-image-wrapper {
-    margin-top: 4em;
-    width: 100%;
-  }
-
-  .landing-image {
-    width: 100%;
-    height: auto;
-  }
-
-  h1 {
-    font-size: 4rem;
-    line-height: 0.9;
-    margin-bottom: 0.75rem;
-  }
-
-  #join {
-    margin-top: 2rem;
-    margin-bottom: 0;
-    font-size: 2rem;
-    max-width: 85%;
-    line-height: 1;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 2.25;
-    margin-bottom: 0.5rem;
-  }
-
-  a {
-    margin-top: 1.5rem;
-  }
-}
-
 .large-intro {
   .landing-image-wrapper {
     overflow: visible;
@@ -150,10 +111,6 @@ h3 {
   a {
     width: 100%;
     font-weight: 600;
-  }
-
-  h1 {
-    width: 1px; // forces the words to be on different lines
   }
 
   .intro p:first-of-type {
@@ -253,17 +210,6 @@ h3 {
 
 .landing_p {
   line-height: normal;
-}
-
-.landing_btn {
-  background-color: #24ba9d;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  margin: 0;
-}
-
-.landing_h2 {
-  line-height: initial;
 }
 
 .landing_h3 {

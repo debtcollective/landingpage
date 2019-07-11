@@ -23,14 +23,10 @@ exclude:
 google_analytics_ua: UA-54926002-1
 copy:
   intro:
-    title: Organize. Resist. Rebuild.
+    title: You are not a loan.
     text:
-    - "<p>You are not a loan.</p>"
-    - "<p>Join the Debt Collective to fight economic exploitation! Here you can dispute
-      your debts, challenge creditors, and join others to organize campaigns, direct
-      actions, and financial disobedience. Together we can build a new economy where
-      no one has to go into debt to meet their basic needs.</p>"
-    subtitle: Join the Community of Fellow Debtors.
+    - "Fight back against your creditors with our free debt dispute tools and community platform"
+    subtitle: "Here's what you can do right away:"
   signup: Sign up and create an account to get started.
   coda:
     title: What is The Debt Collective?
@@ -64,6 +60,6 @@ copy:
     caption: The Debt Collective leverages collective power by offering debtors a
       shared platform for direct action.
   button:
-    join: Join Us
+    join: Sign Up
     read: Read More
     learn: Learn more

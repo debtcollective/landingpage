@@ -13,8 +13,12 @@ author: The Debt Collective
 email: organizers@debtcollective.org
 description: The Debt Collective
 rss: rss
+sass:
+  sass_dir: _sass
+  style: compressed
 plugins:
 - jekyll-seo-tag
+- jekyll-autoprefixer
 markdown: DebtCollective
 exclude:
 - ".circleci"

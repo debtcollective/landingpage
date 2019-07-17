@@ -25,13 +25,13 @@ layout: default
     
           <p class="subtitle mb-4">{{ copy.intro.text }}</p>
           <a class="btn btn-primary btn-block btn-lg" href="{{ login_url }}">{{ copy.button.join }}</a>
-          <div class="landing-image-wrapper">
+        </div>
+        <div class="text-center">
             <!-- diff sizes of the landing-image so load times and clarity are good -->
             <img class="landing-image d-sm-none" src="assets/images/landing-image-mobile.png" height="395" width="300" />
             <img class="landing-image d-none d-sm-flex d-md-none" src="assets/images/landing-image-medium.png" height="750" width="600" />
-          </div>
-          {{ intro_cta_copy }}
         </div>
+        {{ intro_cta_copy }}
       </div>
     </div>
   </section>

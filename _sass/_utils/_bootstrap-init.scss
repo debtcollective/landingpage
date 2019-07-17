@@ -1,2 +1,9 @@
-$primary: #24BA9D;
-$btn-font-weight: 600;
+$btn-font-weight:             600;
+$font-family-sans-serif:      "Libre Franklin","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$font-weight-bold:            800;
+$font-weight-light:           400;
+$font-weight-normal:          600;
+$primary:                   #24BA9D;
+
+// variables that dependend upon others
+$font-family-base:            $font-family-sans-serif;

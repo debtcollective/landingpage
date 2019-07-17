@@ -31,25 +31,11 @@ layout: default
             <img class="landing-image d-sm-none" src="assets/images/landing-image-mobile.png" height="395" width="300" />
             <img class="landing-image d-none d-sm-flex d-md-none" src="assets/images/landing-image-medium.png" height="750" width="600" />
         </div>
-        {{ intro_cta_copy }}
       </div>
     </div>
   </section>
 
-  <!-- sm, md, lg and xl -->
-  <section class="intro row d-none d-md-flex large-intro">
-    <div class="col intro-text">
-      {{ intro_title }}
-      <p class="subtitle">{{ copy.intro.text }}</p>
-      <a class="landing_btn btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
-      {{ intro_cta_copy }}
-    </div>
-    <div class="col landing-image-wrapper">
-      <img src="assets/images/landing-image-desktop.png" height="1200" width="800" class="landing-image" />
-    </div>
-  </section>
-
-  <!-- end intro section -->
+  {{ intro_cta_copy }}
 
   <div id="learn-more" class="row">
     {% assign collectives_url =

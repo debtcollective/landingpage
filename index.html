@@ -6,7 +6,7 @@ layout: default
 {% assign urls = site.data.urls %}
 {% assign login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
 
-<div id="home" class="container landing_container mt-5 landing">
+<div id="home" class="container">
 
   <!-- class/id names starting with `landing_` indicate that there is styling associated with that class name
        (without the `landing_` prefix) for the rest of the site, and we should consider merging the styles
@@ -17,19 +17,21 @@ layout: default
   {% assign intro_cta_copy = "<h2 id='join' class='h1 text-center'>" | append: copy.intro.subtitle | append: "</h2>" %}
 
   <!-- mobile/narrow window (xs) -->
-  <section class="row">
-    <div class="col">
-      <div class="intro-section__content-wrapper">
-        {{ intro_title }}
-  
-        <p class="subtitle mb-4">{{ copy.intro.text }}</p>
-        <a class="btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
-        <div class="landing-image-wrapper">
-          <!-- diff sizes of the landing-image so load times and clarity are good -->
-          <img class="landing-image d-sm-none" src="assets/images/landing-image-mobile.png" height="395" width="300" />
-          <img class="landing-image d-none d-sm-flex d-md-none" src="assets/images/landing-image-medium.png" height="750" width="600" />
+  <section class="intro-section">
+    <div class="row">
+      <div class="col">
+        <div class="intro-section__content-wrapper">
+          {{ intro_title }}
+    
+          <p class="subtitle mb-4">{{ copy.intro.text }}</p>
+          <a class="btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
+          <div class="landing-image-wrapper">
+            <!-- diff sizes of the landing-image so load times and clarity are good -->
+            <img class="landing-image d-sm-none" src="assets/images/landing-image-mobile.png" height="395" width="300" />
+            <img class="landing-image d-none d-sm-flex d-md-none" src="assets/images/landing-image-medium.png" height="750" width="600" />
+          </div>
+          {{ intro_cta_copy }}
         </div>
-        {{ intro_cta_copy }}
       </div>
     </div>
   </section>

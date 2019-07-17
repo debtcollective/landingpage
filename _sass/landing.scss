@@ -101,23 +101,6 @@ h3 {
   }
 }
 
-.landing {
-  padding-top: 3rem;
-
-  @include bigger-than-x-small {
-    padding-top: 6rem;
-  }
-
-  a {
-    width: 100%;
-    font-weight: 600;
-  }
-
-  .intro p:first-of-type {
-    font-weight: 600;
-  }
-}
-
 #sign-up-banner {
   background-color: $text-0;
   color: $white;

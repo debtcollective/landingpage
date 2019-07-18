@@ -2,97 +2,141 @@
 layout: default
 ---
 
-{% assign copy = site.copy %}
-{% assign urls = site.data.urls %}
-{% assign login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
+{% assign copy = site.copy %} {% assign urls = site.data.urls %} {% assign
+login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
 
-<div id="home" class="container">
-
+<div id="home">
   <section id="intro-section" class="intro-section">
-    <div class="row">
-      <div class="col">
-        <div class="intro-section__content-wrapper">
-          <h1 class='h1 lead-variant mb-4'>{{ copy.intro.title }}</h1>
-          <p class="subtitle mb-4">{{ copy.intro.text }}</p>
-          <a class="btn btn-primary btn-block btn-lg" href="{{ login_url }}">{{ copy.button.join }}</a>
-        </div>
-        <div class="text-center">
-          <!-- diff sizes of the landing-image so load times and clarity are good -->
-          <img class="landing-image d-sm-none" src="assets/images/landing-image-mobile.png" height="395" width="300" />
-          <img class="landing-image d-none d-sm-flex d-md-none" src="assets/images/landing-image-medium.png"
-            height="750" width="600" />
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="intro-section__content-wrapper">
+            <h1 class="h1 lead-variant mb-4">{{ copy.intro.title }}</h1>
+            <p class="subtitle mb-4">{{ copy.intro.text }}</p>
+            <a
+              class="btn btn-primary btn-block btn-lg"
+              href="{{ login_url }}"
+              >{{ copy.button.join }}</a
+            >
+          </div>
+          <div class="text-center">
+            <!-- diff sizes of the landing-image so load times and clarity are good -->
+            <img
+              class="landing-image d-sm-none"
+              src="assets/images/landing-image-mobile.png"
+              height="395"
+              width="300"
+            />
+            <img
+              class="landing-image d-none d-sm-flex d-md-none"
+              src="assets/images/landing-image-medium.png"
+              height="750"
+              width="600"
+            />
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <section id="learn-more" class="learn-more">
-    <div class="row">
-      <div class="col">
-        <h2 class='h1 text-center'>{{ copy.intro.subtitle }}</h2>
-      </div>
-      {% assign collectives_url =
-        urls.discourse.endpoint | append: urls.discourse.collectives %}
-      {% assign dispute_url =
-        urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.dispute-tools %}
-      {% assign learnmore = site.data.learnmore %}
-
-      <div class="col-md col-12">
-        <div class="learn-more__item">
-          <img class="learn-more__image" src="{{ learnmore.dispute.image_path }}" />
-          <h3 class="h2 text-center">{{ learnmore.dispute.heading }}</h3>
-          <p>{{ learnmore.dispute.text }}</p>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="h1 text-center">{{ copy.intro.subtitle }}</h2>
         </div>
-        <a href="{{dispute_url}}" class="btn btn-primary btn-block">{{learnmore.dispute.cta_text}}</a>
-      </div>
+        {% assign collectives_url = urls.discourse.endpoint | append:
+        urls.discourse.collectives %} {% assign dispute_url =
+        urls.dispute-tools.endpoint | append:
+        urls.dispute-tools.paths.dispute-tools %} {% assign learnmore =
+        site.data.learnmore %}
 
-      <div class="col-md col-12">
-        <div class="learn-more__item">
-          <img class="learn-more__image" src="{{ learnmore.organize.image_path }}" />
-          <h3 class="h2 text-center">{{ learnmore.organize.heading }}</h3>
-          <p>{{ learnmore.organize.text }}</p>
+        <div class="col-md col-12">
+          <div class="learn-more__item">
+            <img
+              class="learn-more__image"
+              src="{{ learnmore.dispute.image_path }}"
+            />
+            <h3 class="h2 text-center">{{ learnmore.dispute.heading }}</h3>
+            <p>{{ learnmore.dispute.text }}</p>
+          </div>
+          <a href="{{ dispute_url }}" class="btn btn-primary btn-block">{{
+            learnmore.dispute.cta_text
+          }}</a>
         </div>
-        <a href="{{dispute_url}}" class="btn btn-primary btn-block">{{learnmore.organize.cta_text}}</a>
-      </div>
 
-      <div class="col-md col-12">
-        <div class="learn-more__item">
-          <img class="learn-more__image" src="{{ learnmore.learn.image_path }}" />
-          <h3 class="h2 text-center">{{ learnmore.learn.heading }}</h3>
-          <p>{{ learnmore.learn.text }}</p>
+        <div class="col-md col-12">
+          <div class="learn-more__item">
+            <img
+              class="learn-more__image"
+              src="{{ learnmore.organize.image_path }}"
+            />
+            <h3 class="h2 text-center">{{ learnmore.organize.heading }}</h3>
+            <p>{{ learnmore.organize.text }}</p>
+          </div>
+          <a href="{{ dispute_url }}" class="btn btn-primary btn-block">{{
+            learnmore.organize.cta_text
+          }}</a>
         </div>
-        <a href="{{dispute_url}}" class="btn btn-primary btn-block">{{learnmore.learn.cta_text}}</a>
-      </div>
 
+        <div class="col-md col-12">
+          <div class="learn-more__item">
+            <img
+              class="learn-more__image"
+              src="{{ learnmore.learn.image_path }}"
+            />
+            <h3 class="h2 text-center">{{ learnmore.learn.heading }}</h3>
+            <p>{{ learnmore.learn.text }}</p>
+          </div>
+          <a href="{{ dispute_url }}" class="btn btn-primary btn-block">{{
+            learnmore.learn.cta_text
+          }}</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="sign-up-banner" class="sign-up-banner">
-    <div class="row">
-      <div class="col-12">
-        <h3 class="h1 text-center">{{ copy.signup }}</h3>
-        <a class="btn btn-primary btn-block btn-lg" href="{{login_url}}">{{ copy.button.join }}</a>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="h1 text-center">{{ copy.signup }}</h3>
+          <a class="btn btn-primary btn-block btn-lg" href="{{ login_url }}">{{
+            copy.button.join
+          }}</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="row" id="coda">
-    <div class="col-12 order-2 col-md-5 order-md-1">
-      <div id="coda-image"></div>
-      <div class="caption-wrapper">
-        <p class="caption">{{ copy.coda.caption }}</p>
+  <section id="coda">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 order-2 col-md-5 order-md-1">
+          <div id="coda-image"></div>
+          <div class="caption-wrapper">
+            <p class="caption">{{ copy.coda.caption }}</p>
+          </div>
+        </div>
+  
+        <div class="col-12 order-1 col-md-7 order-md-2">
+          <h2 class="landing_h2 coda-title" id="about">{{ copy.coda.title }}</h2>
+          {%- include text.html text=copy.coda.visible-text class="tall-lines
+          coda-text" -%}
+          <div id="hidden-text" class="collapse">
+            {%- include text.html text=copy.coda.hidden-text class="tall-lines
+            coda-text" -%}
+          </div>
+          <button
+            class="landing_btn btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#hidden-text"
+          >
+            {{ copy.button.read }}
+          </button>
+        </div>
       </div>
-    </div>
-
-    <div class="col-12 order-1 col-md-7 order-md-2">
-      <h2 class="landing_h2 coda-title" id="about">{{ copy.coda.title }}</h2>
-      {%- include text.html text=copy.coda.visible-text class="tall-lines coda-text" -%}
-      <div id="hidden-text" class="collapse">
-        {%- include text.html text=copy.coda.hidden-text class="tall-lines coda-text" -%}
-      </div>
-      <button class="landing_btn btn btn-primary" type="button" data-toggle="collapse" data-target="#hidden-text">
-        {{ copy.button.read }}
-      </button>
     </div>
   </div>
 </div>

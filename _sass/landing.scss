@@ -64,7 +64,7 @@ body {
   #coda-image {
     min-height: 19rem;
 
-    width: 90%;
+    width: 100%;
     padding-bottom: 90%;
     margin: 0 auto;
     background-image: url("../assets/images/coda-image.png");
@@ -82,29 +82,6 @@ body {
     display: block;
     margin: -4.5rem 0 0 2.5rem;
     font-size: 1.4em;
-  }
-
-  button {
-    width: 80%;
-
-    @include only-less-large {
-      width: 100%;
-      margin-bottom: 3rem;
-    }
-  }
-
-  .coda-title {
-    max-width: 26rem;
-
-    @include only-less-large {
-      font-size: 2rem;
-      max-width: 11rem;
-      margin-bottom: 1rem;
-    }
-  }
-
-  .coda-text {
-    max-width: 32rem;
   }
 
   ol {

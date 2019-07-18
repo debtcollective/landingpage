@@ -54,9 +54,6 @@
         text-decoration: none;
       }
     }
-    &-copy-and-tos {
-      padding-left: 3.5rem;
-    }
     @include bigger-than-small {
       &-tos {
         padding-left: 2.5rem;

@@ -109,7 +109,7 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
     </div>
   </section>
 
-  <section id="coda">
+  <section id="coda" class="coda">
     <div class="container">
       <div class="row">
         <div class="col-12 order-2 col-md-5 order-md-1">
@@ -120,15 +120,13 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
         </div>
   
         <div class="col-12 order-1 col-md-7 order-md-2">
-          <h2 class="landing_h2 coda-title" id="about">{{ copy.coda.title }}</h2>
-          {%- include text.html text=copy.coda.visible-text class="tall-lines
-          coda-text" -%}
+          <h2 class="h1" id="about">{{ copy.coda.title }}</h2>
+          {%- include text.html text=copy.coda.visible-text -%}
           <div id="hidden-text" class="collapse">
-            {%- include text.html text=copy.coda.hidden-text class="tall-lines
-            coda-text" -%}
+            {%- include text.html text=copy.coda.hidden-text -%}
           </div>
           <button
-            class="landing_btn btn btn-primary"
+            class="btn btn-primary btn-block"
             type="button"
             data-toggle="collapse"
             data-target="#hidden-text"

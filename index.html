@@ -29,7 +29,7 @@ layout: default
   <section id="learn-more" class="learn-more">
     <div class="row">
       <div class="col">
-        <h2 id='join' class='h1 text-center'>{{ copy.intro.subtitle }}</h2>
+        <h2 class='h1 text-center'>{{ copy.intro.subtitle }}</h2>
       </div>
       {% assign collectives_url =
         urls.discourse.endpoint | append: urls.discourse.collectives %}
@@ -67,17 +67,14 @@ layout: default
     </div>
   </section>
 
-  <!-- TODO: this section ios affecting the layout to be horizontal scrollable -->
-  <!-- <div id="sign-up-banner" class="row">
-    <div class="col-12">
-      <h3 class="landing_h3">{{ copy.signup }}</h3>
+  <section id="sign-up-banner" class="sign-up-banner">
+    <div class="row">
+      <div class="col-12">
+        <h3 class="h1 text-center">{{ copy.signup }}</h3>
+        <a class="btn btn-primary btn-block btn-lg" href="{{login_url}}">{{ copy.button.join }}</a>
+      </div>
     </div>
-    <div class="col-sm-4 col-12"></div> placeholder to get button size right
-    <div class="col-sm-4 col-12">
-      <a class="landing_btn btn btn-primary" href={{ login_url }}>{{ copy.button.join }}</a>
-    </div>
-    <div class="col-sm-4 col-12"></div> placeholder to get button size right
-  </div> -->
+  </section>
 
   <div class="row" id="coda">
     <div class="col-12 order-2 col-md-5 order-md-1">

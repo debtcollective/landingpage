@@ -60,30 +60,6 @@ body {
   }
 }
 
-#sign-up-banner {
-  background-color: $text-0;
-  color: $white;
-  text-align: center;
-  padding: 3.4rem 100% 4rem 100%;
-  margin: 5.5rem -100%;
-
-  @include only-less-large {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    padding: 4rem 105%;
-
-    h3 {
-      white-space: initial;
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-  }
-
-  a {
-    margin-top: 1rem;
-  }
-}
-
 #coda {
   #coda-image {
     min-height: 19rem;

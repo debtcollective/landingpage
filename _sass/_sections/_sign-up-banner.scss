@@ -6,4 +6,11 @@
   .btn {
     margin-top: 2rem;
   }
+
+  @include media-breakpoint-up(md) {
+    .btn-responsive {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }

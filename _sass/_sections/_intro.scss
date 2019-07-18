@@ -8,6 +8,10 @@
   &__content-wrapper {
     margin: 0 auto 2.5rem;
     max-width: 100%;
-    width: 16.25rem;
+    width: 80%;
+
+    @include media-breakpoint-up(md) {
+      width: 100%;
+    }
   }
 }

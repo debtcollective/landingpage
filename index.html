@@ -14,7 +14,7 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
             <h1 class="h1 lead-variant mb-4">{{ copy.intro.title }}</h1>
             <p class="subtitle mb-4">{{ copy.intro.text }}</p>
             <a
-              class="btn btn-primary btn-block btn-lg"
+              class="btn btn-primary btn-responsive btn-block btn-lg"
               href="{{ login_url }}"
               >{{ copy.button.join }}</a
             >
@@ -51,7 +51,7 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
         urls.dispute-tools.paths.dispute-tools %} {% assign learnmore =
         site.data.learnmore %}
 
-        <div class="col-md col-12">
+        <div class="col-12">
           <div class="learn-more__item">
             <img
               class="learn-more__image"
@@ -60,12 +60,12 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
             <h3 class="h2 text-center">{{ learnmore.dispute.heading }}</h3>
             <p>{{ learnmore.dispute.text }}</p>
           </div>
-          <a href="{{ dispute_url }}" class="btn btn-primary btn-block">{{
+          <a href="{{ dispute_url }}" class="btn btn-primary btn-responsive btn-block">{{
             learnmore.dispute.cta_text
           }}</a>
         </div>
 
-        <div class="col-md col-12">
+        <div class="col-12">
           <div class="learn-more__item">
             <img
               class="learn-more__image"
@@ -74,12 +74,12 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
             <h3 class="h2 text-center">{{ learnmore.organize.heading }}</h3>
             <p>{{ learnmore.organize.text }}</p>
           </div>
-          <a href="{{ dispute_url }}" class="btn btn-primary btn-block">{{
+          <a href="{{ dispute_url }}" class="btn btn-primary btn-responsive btn-block">{{
             learnmore.organize.cta_text
           }}</a>
         </div>
 
-        <div class="col-md col-12">
+        <div class="col-12">
           <div class="learn-more__item">
             <img
               class="learn-more__image"
@@ -88,7 +88,7 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
             <h3 class="h2 text-center">{{ learnmore.learn.heading }}</h3>
             <p>{{ learnmore.learn.text }}</p>
           </div>
-          <a href="{{ dispute_url }}" class="btn btn-primary btn-block">{{
+          <a href="{{ dispute_url }}" class="btn btn-primary btn-responsive btn-block">{{
             learnmore.learn.cta_text
           }}</a>
         </div>
@@ -101,7 +101,7 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
       <div class="row">
         <div class="col-12">
           <h3 class="h1 text-center">{{ copy.signup }}</h3>
-          <a class="btn btn-primary btn-block btn-lg" href="{{ login_url }}">{{
+          <a class="btn btn-primary btn-responsive btn-block btn-lg" href="{{ login_url }}">{{
             copy.button.join
           }}</a>
         </div>
@@ -126,7 +126,7 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
             {%- include text.html text=copy.coda.hidden-text -%}
           </div>
           <button
-            class="btn btn-primary btn-block"
+            class="btn btn-primary btn-responsive btn-block"
             type="button"
             data-toggle="collapse"
             data-target="#hidden-text"

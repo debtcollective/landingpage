@@ -4,6 +4,12 @@ $font-weight-bold:            600;
 $font-weight-light:           lighter;
 $font-weight-normal:          normal;
 $primary:                     $green;
+$container-max-widths: (
+  sm: 540px,
+  md: 700px,
+  lg: 720px,
+  xl: 1140px
+);
 
 // variables that dependend upon others
 $font-family-base:            $font-family-sans-serif;

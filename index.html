@@ -12,21 +12,20 @@ layout: default
     <div class="row">
       <div class="col">
         <div class="intro-section__content-wrapper">
-            <h1 class='h1 lead-variant mb-4'>{{ copy.intro.title }}</h1>
-    
+          <h1 class='h1 lead-variant mb-4'>{{ copy.intro.title }}</h1>
           <p class="subtitle mb-4">{{ copy.intro.text }}</p>
           <a class="btn btn-primary btn-block btn-lg" href="{{ login_url }}">{{ copy.button.join }}</a>
         </div>
         <div class="text-center">
-            <!-- diff sizes of the landing-image so load times and clarity are good -->
-            <img class="landing-image d-sm-none" src="assets/images/landing-image-mobile.png" height="395" width="300" />
-            <img class="landing-image d-none d-sm-flex d-md-none" src="assets/images/landing-image-medium.png" height="750" width="600" />
+          <!-- diff sizes of the landing-image so load times and clarity are good -->
+          <img class="landing-image d-sm-none" src="assets/images/landing-image-mobile.png" height="395" width="300" />
+          <img class="landing-image d-none d-sm-flex d-md-none" src="assets/images/landing-image-medium.png"
+            height="750" width="600" />
         </div>
       </div>
     </div>
   </section>
 
-  
   <section id="learn-more" class="learn-more">
     <div class="row">
       <div class="col">
@@ -34,22 +33,37 @@ layout: default
       </div>
       {% assign collectives_url =
         urls.discourse.endpoint | append: urls.discourse.collectives %}
-      {%- include learn-more.html heading="Organize"
-        image="assets/images/handshake.png" image_size="85%" image_position="50% 50%"
-        text="Make plans to take collective action together."
-        href=collectives_url -%}
-  
-      {%- include learn-more.html heading="Stay Informed"
-        image="assets/images/newspaper.png" image_size="70%" image_position="50% 50%"
-        text="Learn more about who is taking your money and how to build power to fight back."
-        href=urls.power-report.endpoint -%}
-  
       {% assign dispute_url =
         urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.dispute-tools %}
-      {%- include learn-more.html heading="Fight Back"
-        image="assets/images/fist.png" image_size="77%" image_position="50% 58%"
-        text="Dispute your loans and stop predatory lenders."
-        href=dispute_url -%}
+      {% assign learnmore = site.data.learnmore %}
+
+      <div class="col-md col-12">
+        <div class="learn-more__item">
+          <img class="learn-more__image" src="{{ learnmore.dispute.image_path }}" />
+          <h3 class="h2 text-center">{{ learnmore.dispute.heading }}</h3>
+          <p>{{ learnmore.dispute.text }}</p>
+        </div>
+        <a href="{{dispute_url}}" class="btn btn-primary btn-block">{{learnmore.dispute.cta_text}}</a>
+      </div>
+
+      <div class="col-md col-12">
+        <div class="learn-more__item">
+          <img class="learn-more__image" src="{{ learnmore.organize.image_path }}" />
+          <h3 class="h2 text-center">{{ learnmore.organize.heading }}</h3>
+          <p>{{ learnmore.organize.text }}</p>
+        </div>
+        <a href="{{dispute_url}}" class="btn btn-primary btn-block">{{learnmore.organize.cta_text}}</a>
+      </div>
+
+      <div class="col-md col-12">
+        <div class="learn-more__item">
+          <img class="learn-more__image" src="{{ learnmore.learn.image_path }}" />
+          <h3 class="h2 text-center">{{ learnmore.learn.heading }}</h3>
+          <p>{{ learnmore.learn.text }}</p>
+        </div>
+        <a href="{{dispute_url}}" class="btn btn-primary btn-block">{{learnmore.learn.cta_text}}</a>
+      </div>
+
     </div>
   </section>
 

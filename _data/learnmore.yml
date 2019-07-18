@@ -1,10 +1,15 @@
-- heading: "Organize"
+organize:
+  heading: "Organize with other members."
   image_path: "assets/images/handshake.png"
-  text: "Make plans to take collective action together."
-- heading: "Stay Informed"
+  text: "Join Collectives to take action with our community platform."
+  cta_text: "Join the community"
+learn:
+  heading: "Learn from our news portal."
   image_path: "assets/images/newspaper.png"
-  text: "Learn more about who is taking your money and how to build power to fight back."
-- heading: "Fight Back"
-  image_domain: "https://debtcollective.org"
-  image_path: "/images/tools/hand.png"
-  text: "Dispute your loans and stop predatory lenders."
+  text: "Stay informed on the debt crisis  and major wins for fellow debtors."
+  cta_text: "Learn more"
+dispute:
+  heading: "File a Dispute"
+  image_path: "assets/images/fist.png"
+  text: "Use our tools suite to cancel your debt."
+  cta_text: "Start Dispute"

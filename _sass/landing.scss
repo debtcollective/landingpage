@@ -23,43 +23,6 @@ body {
   margin-top: $header-height;
 }
 
-.large-intro {
-  .landing-image-wrapper {
-    overflow: visible;
-    width: 1px;
-    padding: 0;
-  }
-
-  .landing-image {
-    width: 130%;
-    height: auto;
-    max-height: 62rem;
-
-    margin-left: -8rem;
-    margin-top: 4rem;
-  }
-
-  a {
-    margin-top: 1.5rem;
-    max-width: 23rem;
-  }
-
-  #join {
-    margin-top: 5rem;
-    max-width: 26rem;
-  }
-
-  p:first-of-type {
-    margin-top: 1.5rem;
-  }
-
-  p {
-    max-width: 23rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0;
-  }
-}
-
 #coda {
   #coda-image {
     min-height: 19rem;

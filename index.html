@@ -13,26 +13,16 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
           <div class="intro-section__content-wrapper">
             <h1 class="h1 lead-variant mb-4">{{ copy.intro.title }}</h1>
             <p class="subtitle mb-4">{{ copy.intro.text }}</p>
-            <a
-              class="btn btn-primary btn-responsive btn-block btn-lg"
-              href="{{ login_url }}"
-              >{{ copy.button.join }}</a
-            >
+            <a class="btn btn-primary btn-responsive btn-block btn-lg" href="{{ login_url }}">{{ copy.button.join }}</a>
           </div>
           <div class="text-center">
             <!-- diff sizes of the landing-image so load times and clarity are good -->
-            <img
-              class="landing-image d-sm-none"
-              src="assets/images/landing-image-mobile.png"
-              height="395"
-              width="300"
-            />
-            <img
-              class="landing-image d-none d-sm-flex d-md-none"
-              src="assets/images/landing-image-medium.png"
-              height="750"
-              width="600"
-            />
+            <img class="landing-image d-sm-none" src="assets/images/landing-image-mobile.png" height="auto"
+              width="100%" />
+            <img class="landing-image d-none d-sm-inline-block d-xl-none" src="assets/images/landing-image-medium.png"
+              height="auto" width="100%" />
+            <img class="landing-image d-none d-xl-inline-block" src="assets/images/landing-image-desktop.png" height="1200"
+              width="800" />
           </div>
         </div>
       </div>
@@ -53,10 +43,7 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
 
         <div class="col-12">
           <div class="learn-more__item">
-            <img
-              class="learn-more__image"
-              src="{{ learnmore.dispute.image_path }}"
-            />
+            <img class="learn-more__image" src="{{ learnmore.dispute.image_path }}" />
             <h3 class="h2 text-center">{{ learnmore.dispute.heading }}</h3>
             <p>{{ learnmore.dispute.text }}</p>
           </div>
@@ -67,10 +54,7 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
 
         <div class="col-12">
           <div class="learn-more__item">
-            <img
-              class="learn-more__image"
-              src="{{ learnmore.organize.image_path }}"
-            />
+            <img class="learn-more__image" src="{{ learnmore.organize.image_path }}" />
             <h3 class="h2 text-center">{{ learnmore.organize.heading }}</h3>
             <p>{{ learnmore.organize.text }}</p>
           </div>
@@ -81,10 +65,7 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
 
         <div class="col-12">
           <div class="learn-more__item">
-            <img
-              class="learn-more__image"
-              src="{{ learnmore.learn.image_path }}"
-            />
+            <img class="learn-more__image" src="{{ learnmore.learn.image_path }}" />
             <h3 class="h2 text-center">{{ learnmore.learn.heading }}</h3>
             <p>{{ learnmore.learn.text }}</p>
           </div>
@@ -118,23 +99,19 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
             <p class="caption">{{ copy.coda.caption }}</p>
           </div>
         </div>
-  
+
         <div class="col-12 order-1 col-md-7 order-md-2">
           <h2 class="h1" id="about">{{ copy.coda.title }}</h2>
           {%- include text.html text=copy.coda.visible-text -%}
           <div id="hidden-text" class="collapse">
             {%- include text.html text=copy.coda.hidden-text -%}
           </div>
-          <button
-            class="btn btn-primary btn-responsive btn-block"
-            type="button"
-            data-toggle="collapse"
-            data-target="#hidden-text"
-          >
+          <button class="btn btn-primary btn-responsive btn-block" type="button" data-toggle="collapse"
+            data-target="#hidden-text">
             {{ copy.button.read }}
           </button>
         </div>
       </div>
     </div>
-  </div>
+</div>
 </div>

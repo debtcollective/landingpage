@@ -49,5 +49,24 @@
     .btn-responsive {
       width: 20.625rem;
     }
+
+    /*
+      Each item has a fixed width (defined above) so we target the items on the edges
+      to remove separation and fit container space
+    */
+    .col-item:first-child,
+    .col-item:nth-child(4n) {
+      .learn-more__item,
+      .btn-responsive {
+        margin-left: 0;
+      }
+    }
+
+    .col-item:nth-child(3n) {
+      .learn-more__item,
+      .btn-responsive {
+        margin-right: 0;
+      }
+    }
   }
 }

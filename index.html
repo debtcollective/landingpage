@@ -45,7 +45,7 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
         urls.dispute-tools.paths.dispute-tools %} {% assign learnmore =
         site.data.learnmore %}
 
-        <div class="col-12 col-xl-4">
+        <div class="col-12 col-xl-4 col-item">
           <div class="learn-more__item">
             <img class="learn-more__image" src="{{ learnmore.dispute.image_path }}" />
             <h3 class="h2 text-center">{{ learnmore.dispute.heading }}</h3>
@@ -55,7 +55,7 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
             class="btn btn-primary btn-responsive btn-block">{{learnmore.dispute.cta_text}}</a>
         </div>
 
-        <div class="col-12 col-xl-4">
+        <div class="col-12 col-xl-4 col-item">
           <div class="learn-more__item">
             <img class="learn-more__image" src="{{ learnmore.organize.image_path }}" />
             <h3 class="h2 text-center">{{ learnmore.organize.heading }}</h3>
@@ -65,7 +65,7 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
             class="btn btn-primary btn-responsive btn-block">{{learnmore.organize.cta_text}}</a>
         </div>
 
-        <div class="col-12 col-xl-4">
+        <div class="col-12 col-xl-4 col-item">
           <div class="learn-more__item">
             <img class="learn-more__image" src="{{ learnmore.learn.image_path }}" />
             <h3 class="h2 text-center">{{ learnmore.learn.heading }}</h3>
@@ -93,14 +93,14 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
   <section id="coda" class="coda">
     <div class="container">
       <div class="row">
-        <div class="col-12 order-2 col-md-5 order-md-1">
-          <div id="coda-image"></div>
+        <div class="col-12 order-2 col-xl-6 order-xl-1">
+          <img class="coda__image" src="/assets/images/coda-image.png" width="100%" height="auto" />
           <div class="caption-wrapper">
             <p class="caption">{{ copy.coda.caption }}</p>
           </div>
         </div>
 
-        <div class="col-12 order-1 col-md-7 order-md-2">
+        <div class="col-12 order-1 col-xl-6 order-xl-2">
           <h2 class="h1" id="about">{{ copy.coda.title }}</h2>
           {%- include text.html text=copy.coda.visible-text -%}
           <div id="hidden-text" class="collapse">

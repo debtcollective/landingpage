@@ -6,7 +6,14 @@
     margin-bottom: 2.875rem;
   }
 
-  .btn {
-    margin-bottom: 5.375rem;
+  &__image {
+    margin-bottom: 2.5rem;
+  }
+
+  .btn-responsive {
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 5.375rem;
+      width: 30rem;
+    }
   }
 }

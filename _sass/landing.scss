@@ -22,38 +22,3 @@ body {
 .header-gap {
   margin-top: $header-height;
 }
-
-#coda {
-  #coda-image {
-    min-height: 19rem;
-
-    width: 100%;
-    padding-bottom: 90%;
-    margin: 0 auto;
-    background-image: url("../assets/images/coda-image.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-bottom: 1rem;
-  }
-
-  .caption-wrapper::before {
-    font-size: 3.7rem;
-    content: "\201C";
-  }
-
-  .caption {
-    display: block;
-    margin: -4.5rem 0 0 2.5rem;
-    font-size: 1.4em;
-  }
-
-  ol {
-    list-style-type: none;
-  }
-
-  li {
-    width: 8rem;
-    float: left;
-    margin-bottom: 2rem;
-  }
-}

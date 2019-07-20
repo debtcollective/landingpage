@@ -23,8 +23,8 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
               width="100%" />
             <img class="landing-image d-none d-sm-inline-block d-xl-none" src="assets/images/landing-image-medium.png"
               height="auto" width="100%" />
-            <img class="landing-image d-none d-xl-inline-block" src="assets/images/landing-image-desktop.png" height="auto"
-              width="100%" />
+            <img class="landing-image d-none d-xl-inline-block" src="assets/images/landing-image-desktop.png"
+              height="auto" width="100%" />
           </div>
         </div>
       </div>
@@ -37,43 +37,41 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
         <div class="col">
           <h2 class="h1 text-center">{{ copy.intro.subtitle }}</h2>
         </div>
+      </div>
+      <div class="row">
         {% assign collectives_url = urls.discourse.endpoint | append:
         urls.discourse.collectives %} {% assign dispute_url =
         urls.dispute-tools.endpoint | append:
         urls.dispute-tools.paths.dispute-tools %} {% assign learnmore =
         site.data.learnmore %}
 
-        <div class="col-12">
+        <div class="col-12 col-xl-4">
           <div class="learn-more__item">
             <img class="learn-more__image" src="{{ learnmore.dispute.image_path }}" />
             <h3 class="h2 text-center">{{ learnmore.dispute.heading }}</h3>
-            <p>{{ learnmore.dispute.text }}</p>
+            <p class="learn-more__text">{{ learnmore.dispute.text }}</p>
           </div>
-          <a href="{{ dispute_url }}" class="btn btn-primary btn-responsive btn-block">{{
-            learnmore.dispute.cta_text
-          }}</a>
+          <a href="{{ dispute_url }}"
+            class="btn btn-primary btn-responsive btn-block">{{learnmore.dispute.cta_text}}</a>
         </div>
 
-        <div class="col-12">
+        <div class="col-12 col-xl-4">
           <div class="learn-more__item">
             <img class="learn-more__image" src="{{ learnmore.organize.image_path }}" />
             <h3 class="h2 text-center">{{ learnmore.organize.heading }}</h3>
-            <p>{{ learnmore.organize.text }}</p>
+            <p class="learn-more__text">{{ learnmore.organize.text }}</p>
           </div>
-          <a href="{{ dispute_url }}" class="btn btn-primary btn-responsive btn-block">{{
-            learnmore.organize.cta_text
-          }}</a>
+          <a href="{{ dispute_url }}"
+            class="btn btn-primary btn-responsive btn-block">{{learnmore.organize.cta_text}}</a>
         </div>
 
-        <div class="col-12">
+        <div class="col-12 col-xl-4">
           <div class="learn-more__item">
             <img class="learn-more__image" src="{{ learnmore.learn.image_path }}" />
             <h3 class="h2 text-center">{{ learnmore.learn.heading }}</h3>
-            <p>{{ learnmore.learn.text }}</p>
+            <p class="learn-more__text">{{ learnmore.learn.text }}</p>
           </div>
-          <a href="{{ dispute_url }}" class="btn btn-primary btn-responsive btn-block">{{
-            learnmore.learn.cta_text
-          }}</a>
+          <a href="{{ dispute_url }}" class="btn btn-primary btn-responsive btn-block">{{learnmore.learn.cta_text}}</a>
         </div>
       </div>
     </div>

@@ -1,11 +1,9 @@
 .intro-section {
   padding: 3.5rem 0 4rem;
 
-  .btn {
-    max-width: 11.25rem;
-    
-    @include media-breakpoint-up(xl) {
-      max-width: 100%;
+  .btn-responsive {
+    @include media-breakpoint-down(sm) {
+      width: 11.25rem;
     }
   }
 

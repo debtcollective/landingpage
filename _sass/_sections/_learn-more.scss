@@ -1,7 +1,32 @@
 .learn-more {
+  .h1 {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 2rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 6.25rem;
+    }
+  }
+
   &__item {
     margin-top: 4.3rem;
     text-align: center;
+
+    @include media-breakpoint-up(xl) {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 15.625rem;
+      justify-content: flex-end;
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    @include media-breakpoint-up(xl) {
+      height: 3rem;
+    }
   }
 
   &__image {
@@ -16,6 +41,13 @@
     .btn-responsive {
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__item, 
+    .btn-responsive {
+      width: 20.625rem;
     }
   }
 }

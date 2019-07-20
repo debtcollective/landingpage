@@ -9,20 +9,22 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
   <section id="intro-section" class="intro-section">
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col-12 col-xl-7">
           <div class="intro-section__content-wrapper">
-            <h1 class="h1 lead-variant mb-4">{{ copy.intro.title }}</h1>
+            <h1 class="h1 lead-variant mb-4 mb-md-5 mb-xl-4">{{ copy.intro.title }}</h1>
             <p class="subtitle mb-4">{{ copy.intro.text }}</p>
             <a class="btn btn-primary btn-responsive btn-block btn-lg" href="{{ login_url }}">{{ copy.button.join }}</a>
           </div>
+        </div>
+        <div class="col-12 col-xl-5">
           <div class="text-center">
             <!-- diff sizes of the landing-image so load times and clarity are good -->
             <img class="landing-image d-sm-none" src="assets/images/landing-image-mobile.png" height="auto"
               width="100%" />
             <img class="landing-image d-none d-sm-inline-block d-xl-none" src="assets/images/landing-image-medium.png"
               height="auto" width="100%" />
-            <img class="landing-image d-none d-xl-inline-block" src="assets/images/landing-image-desktop.png" height="1200"
-              width="800" />
+            <img class="landing-image d-none d-xl-inline-block" src="assets/images/landing-image-desktop.png" height="auto"
+              width="100%" />
           </div>
         </div>
       </div>

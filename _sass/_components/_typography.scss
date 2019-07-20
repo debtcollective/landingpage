@@ -2,6 +2,10 @@
   font-size: 1.5rem;
   line-height: 1.2;
   font-weight: 600;
+
+  @include media-breakpoint-up(md) {
+    font-size: 2rem;
+  }
 }
 
 .h1 {
@@ -14,6 +18,10 @@
     font-family: "More Gothic Bold", Impact, sans-serif;
     text-transform: uppercase;
     line-height: 1;
+    
+    @include media-breakpoint-up(md) {
+      font-size: 5rem;
+    }
   }
 }
 

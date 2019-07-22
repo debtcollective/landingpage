@@ -1,69 +1,64 @@
-.Footer {
-  background-color: $text-0;
+.footer {
+  background: $grey;
   padding: 3rem 0 2rem 0;
   color: $white;
   font-weight: 600;
 
-  &__list {
-    @include only-less-medium {
-      &:first-child,
-      &:nth-child(2) {
-        margin-bottom: 2rem;
-      }
+  > *:not(:first-child) {
+    @include media-breakpoint-up(md) {
+      margin-top: 5.25rem;
     }
-    &-head {
-      text-transform: uppercase;
-      color: $text-2;
-      font-size: $font-size-base;
-      margin-bottom: 1rem;
-    }
-    &-item {
-      &:not(:last-child) {
-        margin-bottom: 1rem;
-      }
-      a {
-        color: $white;
-        text-decoration: none;
+  }
 
-        &:hover {
-          color: $text-5;
-          text-decoration: underline;
-        }
+  .back-to-top {
+    text-decoration: underline;
+    margin-bottom: 1.6rem;
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      margin-top: 0.125rem;
+
+      .brand-text + .brand-text {
+        margin: 0 0 0 3rem;
       }
     }
   }
 
-  &__brand {
-    margin-top: 5rem;
-    img {
-      height: 3.375rem;
+  .copyright {
+    color: $text-1;
+  }
+
+  .tos {
+    font-weight: 400;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      color: $text-5;
+      text-decoration: underline;
     }
-    &-copyright {
-      color: $text-1;
+  }
+
+  &__list {
+    &-head {
+      text-transform: uppercase;
+      font-weight: 600;
+      color: $text-2;
       font-size: $font-size-base;
     }
-    &-tos,
-    &-copyright {
-      display: inline-block;
-      white-space: nowrap;
-    }
-    &-tos {
-      a {
-        color: $white;
-        text-decoration: none;
-      }
-    }
-    @include bigger-than-small {
-      &-tos {
-        padding-left: 2.5rem;
-      }
-    }
-    @include only-less-medium {
-      &-logo,
-      &-copy-and-tos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
       }
     }
   }

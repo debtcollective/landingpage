@@ -6,6 +6,8 @@ jobs:
     working_directory: ~/landingpage.debtcollective.org
     steps:
       - checkout
+      - run: git submodule sync
+      - run: git submodule update --init
       - run:
           name: build site
           command: |

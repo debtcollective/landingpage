@@ -1,8 +1,8 @@
 <div class="col-md col-12">
-  <div class="learn-more-image"
-       style="background-image:url({{ include.image }}); background-size: {{ include.image_size }}; background-position: {{ include.image_position }}">
+  <div class="text-center">
+    <img class="learn-more__image" src="{{ include.image }}" />
+    <h3 class="h2 text-center">{{ include.heading }}.</h3>
+    <p>{{ include.text }}</p>
   </div>
-  <h3 class="landing_h3">{{ include.heading }}.</h3>
-  <p class="tall-lines">{{ include.text }}</p>
-  <a href="{{include.href}}" class="landing_btn btn btn-primary">Learn more</a>
+  <a href="{{include.href}}" class="btn btn-primary btn-block">Learn more</a>
 </div>

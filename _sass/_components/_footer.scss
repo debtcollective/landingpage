@@ -1,6 +1,5 @@
 .Footer {
   background-color: $text-0;
-  margin-top: 3rem;
   padding: 3rem 0 2rem 0;
   color: $white;
   font-weight: 600;
@@ -53,9 +52,6 @@
         color: $white;
         text-decoration: none;
       }
-    }
-    &-copy-and-tos {
-      padding-left: 3.5rem;
     }
     @include bigger-than-small {
       &-tos {

@@ -1,0 +1,72 @@
+.learn-more {
+  .h1 {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 2rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 6.25rem;
+    }
+  }
+
+  &__item {
+    margin-top: 4.3rem;
+    text-align: center;
+
+    @include media-breakpoint-up(xl) {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 15.625rem;
+      justify-content: flex-end;
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    @include media-breakpoint-up(xl) {
+      height: 3rem;
+    }
+  }
+
+  &__image {
+    width: 8.5rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  margin-bottom: 6.25rem;
+
+  @include media-breakpoint-up(md) {
+    .btn-responsive {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__item, 
+    .btn-responsive {
+      width: 20.625rem;
+    }
+
+    /*
+      Each item has a fixed width (defined above) so we target the items on the edges
+      to remove separation and fit container space
+    */
+    .col-item:first-child,
+    .col-item:nth-child(4n) {
+      .learn-more__item,
+      .btn-responsive {
+        margin-left: 0;
+      }
+    }
+
+    .col-item:nth-child(3n) {
+      .learn-more__item,
+      .btn-responsive {
+        margin-right: 0;
+      }
+    }
+  }
+}

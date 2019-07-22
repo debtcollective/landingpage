@@ -1,276 +1,44 @@
-html {
-  height: 100%;
-}
-
+html,
 body {
   height: 100%;
-  overflow-x: hidden;
-  background: linear-gradient($bg-blue, $white), $white;
-  background-repeat: no-repeat, repeat;
 }
 
-.wrapper {
-  /* all the following defines the white-blue fade at the bottom of the page */
-  background-image: linear-gradient($white, $bg-blue);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: 100% 30%;
+main,
+.page-content {
+  position: relative;
+}
+
+.background-effect-top {
+  height: 50%;
+  left: 0;
+  position: absolute;
+  top: 0;
   width: 100%;
-  margin-bottom: -3em;
-  padding-bottom: 3em;
+  background: linear-gradient(
+    125.85deg,
+    #dbf8ff 15.46%,
+    #f6faf8 45.89%,
+    #fcfbf7 81.18%
+  );
 }
 
-p.tall-lines {
-  line-height: 2.1;
+.background-effect-bottom {
+  height: 50%;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(0deg, #dbf8ff 0%, #f6faf8 46.3%, #fcfbf7 100%);
 }
 
-h3 {
-  white-space: nowrap;
-}
+.page-content {
+  padding-bottom: 4rem;
 
-.small-intro {
-  margin-left: -22px;
-  margin-right: -22px;
-
-  .landing-image-wrapper {
-    margin-top: 4em;
-    width: 100%;
-  }
-
-  .landing-image {
-    width: 100%;
-    height: auto;
-  }
-
-  h1 {
-    font-size: 4rem;
-    line-height: 0.9;
-    margin-bottom: 0.75rem;
-  }
-
-  #join {
-    margin-top: 2rem;
-    margin-bottom: 0;
-    font-size: 2rem;
-    max-width: 85%;
-    line-height: 1;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 2.25;
-    margin-bottom: 0.5rem;
-  }
-
-  a {
-    margin-top: 1.5rem;
+  @include media-breakpoint-up(md) {
+    padding-bottom: 12rem;
   }
 }
 
-.large-intro {
-  .landing-image-wrapper {
-    overflow: visible;
-    width: 1px;
-    padding: 0;
-  }
-
-  .landing-image {
-    width: 130%;
-    height: auto;
-    max-height: 62rem;
-
-    margin-left: -8rem;
-    margin-top: 4rem;
-  }
-
-  a {
-    margin-top: 1.5rem;
-    max-width: 23rem;
-  }
-
-  #join {
-    margin-top: 5rem;
-    max-width: 26rem;
-  }
-
-  p:first-of-type {
-    margin-top: 1.5rem;
-  }
-
-  p {
-    max-width: 23rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0;
-  }
-}
-
-#learn-more {
-  .learn-more-image {
-    height: 13rem;
-    width: 13rem;
-    margin: 0.5rem auto -0.5rem auto;
-    background-repeat: no-repeat;
-
-    @include only-x-small {
-      margin-top: -0.5rem;
-      width: 50%;
-      padding-bottom: 50%; // this in combination with width 50% keeps the div square (!)
-    }
-  }
-
-  h3 {
-    margin-top: -1.1rem;
-    margin-bottom: -0.2rem;
-
-    @include only-x-small {
-      margin-top: -2rem;
-      font-size: 1.5rem;
-    }
-  }
-
-  p {
-    min-height: 7.5rem;
-    border-bottom: 2px solid black;
-    margin-bottom: 1rem;
-
-    @include only-less-medium {
-      min-height: auto;
-      padding-bottom: 0.75rem;
-    }
-  }
-}
-
-.landing {
-  padding-top: 3rem;
-
-  @include bigger-than-x-small {
-    padding-top: 6rem;
-  }
-
-  a {
-    width: 100%;
-    font-weight: 600;
-  }
-
-  h1 {
-    width: 1px; // forces the words to be on different lines
-  }
-
-  .intro p:first-of-type {
-    font-weight: 600;
-  }
-}
-
-#sign-up-banner {
-  background-color: $text-0;
-  color: $white;
-  text-align: center;
-  padding: 3.4rem 100% 4rem 100%;
-  margin: 5.5rem -100%;
-
-  @include only-less-large {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    padding: 4rem 105%;
-
-    h3 {
-      white-space: initial;
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-  }
-
-  a {
-    margin-top: 1rem;
-  }
-}
-
-#coda {
-  #coda-image {
-    min-height: 19rem;
-
-    width: 90%;
-    padding-bottom: 90%;
-    margin: 0 auto;
-    background-image: url("../assets/images/coda-image.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-bottom: 1rem;
-  }
-
-  .caption-wrapper::before {
-    font-size: 3.7rem;
-    content: "\201C";
-  }
-
-  .caption {
-    display: block;
-    margin: -4.5rem 0 0 2.5rem;
-    font-size: 1.4em;
-  }
-
-  button {
-    width: 80%;
-
-    @include only-less-large {
-      width: 100%;
-      margin-bottom: 3rem;
-    }
-  }
-
-  .coda-title {
-    max-width: 26rem;
-
-    @include only-less-large {
-      font-size: 2rem;
-      max-width: 11rem;
-      margin-bottom: 1rem;
-    }
-  }
-
-  .coda-text {
-    max-width: 32rem;
-  }
-
-  ol {
-    list-style-type: none;
-  }
-
-  li {
-    width: 8rem;
-    float: left;
-    margin-bottom: 2rem;
-  }
-}
-
-// see index.html comment
-
-.landing_tight {
-  font-size: 6.6rem;
-  line-height: 0.85;
-  font-weight: normal;
-}
-
-.landing_p {
-  line-height: normal;
-}
-
-.landing_btn {
-  background-color: #24ba9d;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  margin: 0;
-}
-
-.landing_h2 {
-  line-height: initial;
-}
-
-.landing_h3 {
-  line-height: 2;
-  margin-bottom: 0.1rem;
-}
-
-.landing_container {
-  max-width: 980px;
+.header-gap {
+  margin-top: $header-height;
 }

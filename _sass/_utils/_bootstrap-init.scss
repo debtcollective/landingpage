@@ -1,0 +1,15 @@
+$btn-font-weight:             600;
+$font-family-sans-serif:      "Libre Franklin","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$font-weight-bold:            600;
+$font-weight-light:           lighter;
+$font-weight-normal:          normal;
+$primary:                     $green;
+$container-max-widths: (
+  sm: 540px,
+  md: 700px,
+  lg: 720px,
+  xl: 1200px
+);
+
+// variables that dependend upon others
+$font-family-base:            $font-family-sans-serif;

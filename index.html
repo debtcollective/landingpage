@@ -2,100 +2,116 @@
 layout: default
 ---
 
-{% assign copy = site.copy %}
-{% assign urls = site.data.urls %}
-{% assign login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
+{% assign copy = site.copy %} {% assign urls = site.data.urls %} {% assign
+login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
 
-<div class="Home container landing_container mt-5 landing">
-
-  <!-- class/id names starting with `landing_` indicate that there is styling associated with that class name
-       (without the `landing_` prefix) for the rest of the site, and we should consider merging the styles
-       for consistent branding across the site -->
-
-  <!-- intro is different for different sizes -->
-  {% assign intro_title = "<h1 class='landing_tight tight'>" | append: copy.intro.title | append: "</h1>" %}
-  {% assign intro_subtitle = "<h2 id='join' class='landing_h2'>" | append: copy.intro.subtitle | append: "</h2>" %}
-
-  <!-- mobile/narrow window (xs) -->
-  <div class="intro row d-flex d-md-none small-intro">
-    <div class="col">
-      {{ intro_title }}
-
-      {%- include text.html text=copy.intro.text -%}
-      <a class="landing_btn btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
-      <div class="landing-image-wrapper">
-        <!-- diff sizes of the landing-image so load times and clarity are good -->
-        <img class="landing-image d-sm-none" src="assets/images/landing-image-mobile.png" height="395" width="300" />
-        <img class="landing-image d-none d-sm-flex d-md-none" src="assets/images/landing-image-medium.png" height="750" width="600" />
-      </div>
-      {{ intro_subtitle }}
-    </div>
-  </div>
-
-  <!-- sm, md, lg and xl -->
-  <div class="intro row d-none d-md-flex large-intro">
-    <div class="col intro-text">
-      {{ intro_title }}
-      {%- include text.html text=copy.intro.text class="tall-lines" -%}
-      <a class="landing_btn btn btn-primary" href="{{ login_url }}">{{ copy.button.join }}</a>
-      {{ intro_subtitle }}
-    </div>
-    <div class="col landing-image-wrapper">
-      <img src="assets/images/landing-image-desktop.png" height="1200" width="800" class="landing-image" />
-    </div>
-  </div>
-
-  <!-- end intro section -->
-
-  <div id="learn-more" class="row">
-    {% assign collectives_url =
-      urls.discourse.endpoint | append: urls.discourse.collectives %}
-    {%- include learn-more.html heading="Organize"
-      image="assets/images/handshake.png" image_size="85%" image_position="50% 50%"
-      text="Make plans to take collective action together."
-      href=collectives_url -%}
-
-    {%- include learn-more.html heading="Stay Informed"
-      image="assets/images/newspaper.png" image_size="70%" image_position="50% 50%"
-      text="Learn more about who is taking your money and how to build power to fight back."
-      href=urls.power-report.endpoint -%}
-
-    {% assign dispute_url =
-      urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.dispute-tools %}
-    {%- include learn-more.html heading="Fight Back"
-      image="assets/images/fist.png" image_size="77%" image_position="50% 58%"
-      text="Dispute your loans and stop predatory lenders."
-      href=dispute_url -%}
-  </div>
-
-  <div id="sign-up-banner" class="row">
-    <div class="col-12">
-      <h3 class="landing_h3">{{ copy.signup }}</h3>
-    </div>
-    <div class="col-sm-4 col-12"></div> <!-- placeholder to get button size right -->
-    <div class="col-sm-4 col-12">
-      <a class="landing_btn btn btn-primary" href={{ login_url }}>{{ copy.button.join }}</a>
-    </div>
-    <div class="col-sm-4 col-12"></div> <!-- placeholder to get button size right -->
-  </div>
-
-  <div class="row" id="coda">
-    <div class="col-12 order-2 col-md-5 order-md-1">
-      <div id="coda-image"></div>
-      <div class="caption-wrapper">
-        <p class="caption">{{ copy.coda.caption }}</p>
+<div id="home">
+  <section id="intro-section" class="intro-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-xl-7">
+          <div class="intro-section__content-wrapper">
+            <h1 class="h1 lead-variant mb-4 mb-md-5 mb-xl-4">{{ copy.intro.title }}</h1>
+            <p class="subtitle mb-4">{{ copy.intro.text }}</p>
+            <a class="btn btn-primary btn-responsive btn-block btn-lg" href="{{ login_url }}">{{ copy.button.join }}</a>
+          </div>
+        </div>
+        <div class="col-12 col-xl-5">
+          <div class="text-center">
+            <!-- diff sizes of the landing-image so load times and clarity are good -->
+            <img class="landing-image d-sm-none" src="assets/images/landing-image-mobile.png" height="auto"
+              width="100%" />
+            <img class="landing-image d-none d-sm-inline-block d-xl-none" src="assets/images/landing-image-medium.png"
+              height="auto" width="100%" />
+            <img class="landing-image d-none d-xl-inline-block" src="assets/images/landing-image-desktop.png"
+              height="auto" width="100%" />
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="col-12 order-1 col-md-7 order-md-2">
-      <h2 class="landing_h2 coda-title" id="about">{{ copy.coda.title }}</h2>
-      {%- include text.html text=copy.coda.visible-text class="tall-lines coda-text" -%}
-      <div id="hidden-text" class="collapse">
-        {%- include text.html text=copy.coda.hidden-text class="tall-lines coda-text" -%}
+  <section id="learn-more" class="learn-more">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="h1 text-center">{{ copy.intro.subtitle }}</h2>
+        </div>
       </div>
-      <button class="landing_btn btn btn-primary" type="button" data-toggle="collapse" data-target="#hidden-text">
-        {{ copy.button.read }}
-      </button>
+      <div class="row">
+        {% assign collectives_url = urls.discourse.endpoint | append:
+        urls.discourse.collectives %} {% assign dispute_url =
+        urls.dispute-tools.endpoint | append:
+        urls.dispute-tools.paths.dispute-tools %} {% assign learnmore =
+        site.data.learnmore %}
+
+        <div class="col-12 col-xl-4 col-item">
+          <div class="learn-more__item">
+            <img class="learn-more__image" src="{{ learnmore.dispute.image_path }}" />
+            <h3 class="h2 text-center">{{ learnmore.dispute.heading }}</h3>
+            <p class="learn-more__text">{{ learnmore.dispute.text }}</p>
+          </div>
+          <a href="{{ dispute_url }}"
+            class="btn btn-primary btn-responsive btn-block">{{learnmore.dispute.cta_text}}</a>
+        </div>
+
+        <div class="col-12 col-xl-4 col-item">
+          <div class="learn-more__item">
+            <img class="learn-more__image" src="{{ learnmore.organize.image_path }}" />
+            <h3 class="h2 text-center">{{ learnmore.organize.heading }}</h3>
+            <p class="learn-more__text">{{ learnmore.organize.text }}</p>
+          </div>
+          <a href="{{ dispute_url }}"
+            class="btn btn-primary btn-responsive btn-block">{{learnmore.organize.cta_text}}</a>
+        </div>
+
+        <div class="col-12 col-xl-4 col-item">
+          <div class="learn-more__item">
+            <img class="learn-more__image" src="{{ learnmore.learn.image_path }}" />
+            <h3 class="h2 text-center">{{ learnmore.learn.heading }}</h3>
+            <p class="learn-more__text">{{ learnmore.learn.text }}</p>
+          </div>
+          <a href="{{ dispute_url }}" class="btn btn-primary btn-responsive btn-block">{{learnmore.learn.cta_text}}</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <section id="sign-up-banner" class="sign-up-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="h1 text-center">{{ copy.signup }}</h3>
+          <a class="btn btn-primary btn-responsive btn-block btn-lg" href="{{ login_url }}">{{
+            copy.button.join
+          }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="coda" class="coda">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 order-2 col-xl-6 order-xl-1">
+          <img class="coda__image" src="/assets/images/coda-image.png" width="100%" height="auto" />
+          <div class="caption-wrapper">
+            <p class="caption">{{ copy.coda.caption }}</p>
+          </div>
+        </div>
+
+        <div class="col-12 order-1 col-xl-6 order-xl-2">
+          <h2 class="h1" id="about">{{ copy.coda.title }}</h2>
+          {%- include text.html text=copy.coda.visible-text -%}
+          <div id="hidden-text" class="collapse">
+            {%- include text.html text=copy.coda.hidden-text -%}
+          </div>
+          <button class="btn btn-primary btn-responsive btn-block" type="button" data-toggle="collapse"
+            data-target="#hidden-text">
+            {{ copy.button.read }}
+          </button>
+        </div>
+      </div>
+    </div>
+</div>
 </div>

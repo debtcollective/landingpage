@@ -1,0 +1,7 @@
+.btn-responsive {
+  max-width: 100%;
+
+  @include media-breakpoint-up(md) {
+    width: 18.75rem;
+  }
+}

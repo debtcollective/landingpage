@@ -11,9 +11,14 @@
   }
 
   .btn-responsive {
-    @include media-breakpoint-down(xl) {
-      margin-bottom: 5.375rem;
-      width: 30rem;
+    margin-bottom: 5.375rem;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 0;
     }
   }
 }

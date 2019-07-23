@@ -35,6 +35,7 @@ copy:
   signup: Create an account to get started.
   coda:
     title: What is The Debt Collective?
+    video_url: https://www.youtube.com/embed/ojgn6l2APfQ
     visible-text:
     - "<p>Today most of us are in debt. No matter how much we work or how hard we
       try to get ahead, we are barely getting by. We are struggling to get out from

@@ -39,11 +39,10 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
         </div>
       </div>
       <div class="row">
-        {% assign collectives_url = urls.discourse.endpoint | append:
-        urls.discourse.collectives %} {% assign dispute_url =
-        urls.dispute-tools.endpoint | append:
-        urls.dispute-tools.paths.dispute-tools %} {% assign learnmore =
-        site.data.learnmore %}
+        {% assign dispute_url = urls.dispute-tools.endpoint %}
+        {% assign community_url = urls.discourse.endpoint %}
+        {% assign power_report_url = urls.power-report.endpoint %}
+        {% assign learnmore = site.data.learnmore %}
 
         <div class="col-12 col-xl-4 col-item">
           <div class="learn-more__item">
@@ -61,7 +60,7 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
             <h3 class="h2 text-center">{{ learnmore.organize.heading }}</h3>
             <p class="learn-more__text">{{ learnmore.organize.text }}</p>
           </div>
-          <a href="{{ dispute_url }}"
+          <a href="{{ community_url }}"
             class="btn btn-primary btn-responsive btn-block">{{learnmore.organize.cta_text}}</a>
         </div>
 
@@ -71,7 +70,7 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
             <h3 class="h2 text-center">{{ learnmore.learn.heading }}</h3>
             <p class="learn-more__text">{{ learnmore.learn.text }}</p>
           </div>
-          <a href="{{ dispute_url }}" class="btn btn-primary btn-responsive btn-block">{{learnmore.learn.cta_text}}</a>
+          <a href="{{ power_report_url }}" class="btn btn-primary btn-responsive btn-block">{{learnmore.learn.cta_text}}</a>
         </div>
       </div>
     </div>
@@ -106,7 +105,11 @@ login_url = urls.discourse.endpoint | append: urls.discourse.paths.login %}
           <div id="hidden-text" class="collapse">
             {%- include text.html text=copy.coda.hidden-text -%}
           </div>
-          <button class="btn btn-primary btn-responsive btn-block" type="button" data-toggle="collapse"
+          <button class="btn btn-primary btn-responsive btn-block"
+            type="button"
+            data-toggle="collapse"
+            aria-expanded="false"
+            aria-controls="hidden-text"
             data-target="#hidden-text">
             {{ copy.button.read }}
           </button>

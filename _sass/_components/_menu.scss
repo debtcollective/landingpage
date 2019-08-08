@@ -1,0 +1,35 @@
+$stripe-height: 0.25rem;
+
+.menu-trigger {
+  position: relative;
+  top: -$stripe-height * 2;
+  width: 1.5rem;
+}
+
+.menu-stripe {
+  display: block;
+  position: relative;
+  top: $stripe-height * 2;
+
+  &,
+  &::before,
+  &::after {
+    background: $grey;
+    height: $stripe-height;
+    width: 100%;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+  }
+
+  &::before {
+    top: -$stripe-height * 2;
+  }
+
+  &::after {
+    top: $stripe-height * 2;
+  }
+}

@@ -1,32 +1,31 @@
 {% assign urls = site.data.urls %}
 
-<div id="debt-collective-header"></div>
+<header id="debt-collective-header" class="header fixed-top">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3">
+        <div class="header-col justify-content-start">
+          <div id="menu" class="menu-trigger" role="button">
+            <span class="menu-stripe" />
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="header-col">
+            <img class="logo" src="/assets/images/logo.png" width="100%" />
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="header-col justify-content-end">
+          <button class="btn btn-sm btn-outline-dark">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 <script>
-  Vue.component(DebtCollectiveHeader.name, DebtCollectiveHeader);
-  new Vue({
-    el: "#debt-collective-header",
-    render: function(h) {
-      return h("debt-collective-header", {
-        attrs: {
-          "header-links": [
-            {
-              href: "{{ urls.dispute-tools.endpoint }}",
-              text: "Dispute Your Debt"
-            },
-            { href: "{{ urls.discourse.endpoint }}", text: "Community" },
-            { href: "{{ urls.discourse.endpoint }}", text: "Events" },
-            {
-              href: "{{ urls.power-report.endpoint }}",
-              text: "The Power Report"
-            },
-            { href: "http://tools.debtcollective.org/donate", text: "Donate" }
-          ],
-          "dropdown-links": [
-            { href: "/#about", text: "About the Debt Collective" }
-          ],
-          "discourse-endpoint": "{{ urls.discourse.endpoint }}"
-        }
-      });
-    }
+  $(window).on('scroll', function () {
+    var $nav = $("#debt-collective-header");
+    $nav.toggleClass('active', $(window).scrollTop() > $nav.height());
   });
 </script>

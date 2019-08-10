@@ -1,5 +1,5 @@
 .header {
-  $active-proportion: 0.8;
+  $active-proportion: 0.7;
 
   display: flex;
   flex-direction: column;
@@ -38,6 +38,14 @@
     
     .logo {
       width: 12rem;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &.active {
+      .logo {
+        transform: none;
+      }
     }
   }
 

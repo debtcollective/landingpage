@@ -1,21 +1,28 @@
-$stripe-height: 0.25rem;
+$stripe-height-sm: 0.25rem;
+$stripe-width-sm: 1.5rem;
+$stripe-width-md: 4.6875rem;
 
 .menu-trigger {
   position: relative;
-  top: -$stripe-height * 2;
-  width: 1.5rem;
+  top: -$stripe-height-sm * 2;
+  width: $stripe-width-sm;
+
+  @include media-breakpoint-up(md) {
+    top: 0;
+    width: $stripe-width-md;
+  }
 }
 
 .menu-stripe {
   display: block;
   position: relative;
-  top: $stripe-height * 2;
+  top: $stripe-height-sm * 2;
 
   &,
   &::before,
   &::after {
     background: $grey;
-    height: $stripe-height;
+    height: $stripe-height-sm;
     width: 100%;
   }
 
@@ -26,10 +33,22 @@ $stripe-height: 0.25rem;
   }
 
   &::before {
-    top: -$stripe-height * 2;
+    top: -$stripe-height-sm * 2;
   }
 
   &::after {
-    top: $stripe-height * 2;
+    top: $stripe-height-sm * 2;
+  }
+
+  @include media-breakpoint-up(md) {
+    top: 0;
+
+    &::before {
+      top: -1rem;
+    }
+  
+    &::after {
+      top: 1rem;
+    }
   }
 }

@@ -40,5 +40,9 @@ main,
 }
 
 .header-gap {
-  padding-top: $header-height;
+  padding-top: $header-height-sm;
+
+  @include media-breakpoint-up(md) {
+    padding-top: $header-height-md;
+  }
 }

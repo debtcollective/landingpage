@@ -1,7 +1,9 @@
 .header {
+  $active-proportion: 0.8;
+
   display: flex;
   flex-direction: column;
-  height: $header-height;
+  height: $header-height-sm;
   justify-content: center;
   transition: all 0.216s ease;
   
@@ -11,20 +13,53 @@
     height: 100%;
     justify-content: center;
   }
+  
+  &.active {
+    background: $beige; 
+    border-bottom: 0.0625rem solid $grey-2;
+    height: $header-height-sm * $active-proportion;
+
+    .logo {
+      transform: unquote("scale(#{$active-proportion})");
+    }
+  }
 
   .logo {
     width: 8.5rem;
     transition: all 0.216s ease;
   }
-  
-  &.active {
-    $proportion: 0.8;
-    background: $beige; 
-    border-bottom: 0.0625rem solid $grey-2;
-    height: $header-height * $proportion;
 
-    .logo {
-      transform: unquote("scale(#{$proportion})");
+  @include media-breakpoint-up(md) {
+    height: $header-height-md;
+
+    &.active {
+      height: $header-height-md * $active-proportion;
     }
+    
+    .logo {
+      width: 12rem;
+    }
+  }
+
+  // As the design suggest unstandard containers we need to add extra paddings
+  // to find a middle ground between the heterogeneous containers and trying to keep
+  // bootstrap styles clean
+  @include media-breakpoint-up(lg) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.btn-session {
+  @include media-breakpoint-up(md) {
+    width: 11.25rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 9.5rem;
+  }
+
+  & + & {
+    margin-left: 1.5rem;
   }
 }

@@ -1,11 +1,13 @@
 .header {
   $active-proportion: 0.7;
 
+  border-bottom: 0.0625rem solid transparent;
   display: flex;
   flex-direction: column;
   height: $header-height-sm;
   justify-content: center;
   transition: all 0.216s ease;
+  transition-delay: 0.216s;
   
   &-col {
     align-items: center;
@@ -13,10 +15,14 @@
     height: 100%;
     justify-content: center;
   }
+
+  &.slider-nav-open {
+    transition-delay: 0s;
+  }
   
   &.active {
     background: $beige; 
-    border-bottom: 0.0625rem solid $grey-2;
+    border-color: $grey-2;
     height: $header-height-sm * $active-proportion;
 
     .logo {

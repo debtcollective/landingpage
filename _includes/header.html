@@ -1,11 +1,11 @@
 {% assign urls = site.data.urls %}
 
 <header id="debt-collective-header" class="header fixed-top">
-  <div class="container container-odd">
+  <div class="container-odd">
     <div class="row">
       <div class="col-3 col-lg-3 d-xl-none">
         <div class="header-col justify-content-start">
-          <div id="menu" class="menu-trigger" role="button">
+          <div id="menu-trigger" class="menu-trigger" role="button">
             <span class="menu-stripe" />
           </div>
         </div>
@@ -16,13 +16,13 @@
           <div class="d-none d-xl-flex">
             <ul class="nav align-items-center" role="navigation">
               <li class="nav-item">
-                <a class="nav-link active" href="{{ urls.dispute-tools.endpoint }}">Dispute Your Debt</a>
+                <a class="nav-link" href="{{ urls.dispute-tools.endpoint }}">Dispute Your Debt</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ urls.discourse.endpoint }}">Community</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="{{ urls.power-report.endpoint }}">The Power Report</a>
+                <a class="nav-link" href="{{ urls.power-report.endpoint }}">The Power Report</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ urls.donate.endpoint }}">Donate</a>
@@ -44,9 +44,39 @@
     </div>
   </div>
 </header>
+
+<div id="slider-nav" class="slider-nav d-xl-none">
+  <ul class="nav flex-column" role="navigation">
+    <li class="nav-item">
+      <a class="nav-link" href="{{ urls.dispute-tools.endpoint }}">Dispute Your Debt</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ urls.discourse.endpoint }}">Community</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ urls.power-report.endpoint }}">The Power Report</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ urls.donate.endpoint }}">Donate</a>
+    </li>
+  </ul>
+</div>
+
 <script>
   $(window).on('scroll', function () {
-    var $nav = $("#debt-collective-header");
-    $nav.toggleClass('active', $(window).scrollTop() > $nav.height());
+    var $header = $("#debt-collective-header");
+    
+    if (!$header.hasClass('slider-nav-open')) {
+      $header.toggleClass('active', $(window).scrollTop() > $header.height());
+    }
+  });
+
+  $('#menu-trigger').on('click', function () {
+    var $nav = $("#slider-nav");
+    var $header = $("#debt-collective-header");
+    
+    $header.toggleClass('active');
+    $header.toggleClass('slider-nav-open');
+    $nav.toggleClass('slider-nav-open');
   });
 </script>

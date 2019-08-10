@@ -1,0 +1,33 @@
+.slider-nav {
+  background: $beige;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform: translate3d(0, -100%, 0);
+  z-index: 1;
+  transition: transform 0.216s ease;
+  transition-delay: 0s;
+  
+  &.slider-nav-open {
+    transform: translate3d(0, 6.25rem, 0);
+    transition-delay: 0.216s;
+  }
+
+  .nav-item {
+    border-bottom: 0.0625rem solid $grey-2;
+  }
+  
+  .nav-link {
+    // while is not a container is a way to keep the alignment without rely on DOM structure
+    @extend .container-odd;
+    align-items: center;
+    color: #2b2b2b;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    padding: 1rem;
+    text-decoration: none;
+    width: 100%;
+  }
+}

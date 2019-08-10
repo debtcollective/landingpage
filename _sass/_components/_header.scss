@@ -13,17 +13,18 @@
   }
 
   .logo {
-    max-width: 12rem;
+    width: 8.5rem;
     transition: all 0.216s ease;
   }
   
   &.active {
+    $proportion: 0.8;
     background: $beige; 
     border-bottom: 0.0625rem solid $grey-2;
-    height: $header-height * 0.65;
+    height: $header-height * $proportion;
 
     .logo {
-      transform: scale(0.65);
+      transform: unquote("scale(#{$proportion})");
     }
   }
 }

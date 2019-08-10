@@ -20,7 +20,8 @@
     transition-delay: 0s;
   }
   
-  &.active {
+  &.active,
+  &.slider-nav-open {
     background: $beige; 
     border-color: $grey-2;
     height: $header-height-sm * $active-proportion;
@@ -42,7 +43,8 @@
   @include media-breakpoint-up(md) {
     height: $header-height-md;
 
-    &.active {
+    &.active,
+    &.slider-nav-open {
       height: $header-height-md * $active-proportion;
     }
     
@@ -59,7 +61,8 @@
       top: 0.125rem;
     }
 
-    &.active {
+    &.active,
+    &.slider-nav-open {
       height: 4.5rem;
 
       .logo {

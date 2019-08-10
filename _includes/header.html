@@ -65,17 +65,14 @@
 <script>
   $(window).on('scroll', function () {
     var $header = $("#debt-collective-header");
-    
-    if (!$header.hasClass('slider-nav-open')) {
-      $header.toggleClass('active', $(window).scrollTop() > $header.height());
-    }
+
+    $header.toggleClass('active', $(window).scrollTop() > $header.height());
   });
 
   $('#menu-trigger').on('click', function () {
     var $nav = $("#slider-nav");
     var $header = $("#debt-collective-header");
     
-    $header.toggleClass('active');
     $header.toggleClass('slider-nav-open');
     $nav.toggleClass('slider-nav-open');
   });

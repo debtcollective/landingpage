@@ -42,9 +42,15 @@
   }
 
   @include media-breakpoint-up(xl) {
+    .logo {
+      width: 10rem;
+    }
+
     &.active {
+      height: 4.5rem;
+
       .logo {
-        transform: none;
+        transform: scale(0.9);
       }
     }
   }

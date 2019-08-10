@@ -10,8 +10,13 @@
   transition-delay: 0s;
   
   &.slider-nav-open {
-    transform: translate3d(0, 6.25rem, 0);
+    transform: unquote("translate3d(0, #{$header-height-sm * 0.7}, 0)");
     transition-delay: 0.216s;
+
+    @include media-breakpoint-up(md) {
+      transform: unquote("translate3d(0, #{$header-height-md * 0.7}, 0)");
+    transition-delay: 0.216s;
+    }
   }
 
   .nav-item {

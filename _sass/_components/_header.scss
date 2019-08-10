@@ -29,6 +29,10 @@
     transition: all 0.216s ease;
   }
 
+  .nav {
+    margin-left: 2.5rem;
+  }
+
   @include media-breakpoint-up(md) {
     height: $header-height-md;
 
@@ -44,6 +48,9 @@
   @include media-breakpoint-up(xl) {
     .logo {
       width: 10rem;
+      position: relative;
+      // fix visual effect with logo text and navigation text
+      top: 0.125rem;
     }
 
     &.active {
@@ -58,7 +65,7 @@
   // As the design suggest unstandard containers we need to add extra paddings
   // to find a middle ground between the heterogeneous containers and trying to keep
   // bootstrap styles clean
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-only(lg) {
     padding-left: 1rem;
     padding-right: 1rem;
   }

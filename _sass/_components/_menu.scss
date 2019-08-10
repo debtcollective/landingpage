@@ -18,12 +18,37 @@ $stripe-width-md: 4.6875rem;
   position: relative;
   top: $stripe-height-sm * 2;
 
+  .menu-trigger.active & {
+    transform: rotate(45deg);
+
+    &::before {
+      width: 0;
+    }
+    
+    &::after {
+      margin-top: -0.5rem;
+      margin-left: 0rem;
+      transform: rotate(90deg);
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 60%;
+
+      &::after {
+        margin-top: -1rem;
+        margin-left: 0rem;
+      }
+    }
+  }
+
   &,
   &::before,
   &::after {
     background: $grey;
     height: $stripe-height-sm;
     width: 100%;
+    transform: rotate(0deg);
+    transition: transform .216s ease;
   }
 
   &::before,

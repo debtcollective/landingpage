@@ -1,0 +1,5 @@
+// bootstrap doesn't provide a way to modify the colors for nav-link
+.nav-link {
+  color: $grey;
+  font-weight: 600;
+}

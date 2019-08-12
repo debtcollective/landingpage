@@ -1,0 +1,12 @@
+// IMPORTANT: We should never change bootstrap core styles. If you need it use the variables for it.
+
+// ".container-odd" is a special case of container that will be as a Bootstrap ".container"
+// but after >= lg screens it will be fluid
+.container-odd {
+  @extend .container;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 100% !important;
+    width: 100%;
+  }
+}

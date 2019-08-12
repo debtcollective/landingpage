@@ -22,5 +22,7 @@ wiki:
   endpoint: "http://wiki.debtcollective.org"
 power-report:
   endpoint: "https://powerreport.debtcollective.org"
+donate:
+  endpoint: "http://tools.debtcollective.org/donate"
 repository:
   endpoint: "https://github.com/debtcollective"

@@ -2,7 +2,7 @@ $stripe-height-sm: 0.25rem;
 $stripe-width-sm: 1.5rem;
 $stripe-width-md: 4.6875rem;
 
-.menu-trigger {
+.menu-icon {
   position: relative;
   top: -$stripe-height-sm * 2;
   width: $stripe-width-sm;
@@ -11,6 +11,13 @@ $stripe-width-md: 4.6875rem;
     top: 0;
     width: $stripe-width-md;
   }
+}
+
+.menu-trigger {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
 }
 
 .menu-stripe {

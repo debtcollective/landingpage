@@ -1,8 +1,15 @@
+$footer-max-width: 1440px;
+
 .footer {
   background: $grey;
   padding: 3rem 0 2rem 0;
   color: $white;
   font-weight: 600;
+
+  > .container-fluid {
+    max-width: $footer-max-width;
+    margin-left: 0;
+  }
 
   > *:not(:first-child) {
     @include media-breakpoint-up(md) {

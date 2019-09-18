@@ -8,10 +8,8 @@ discourse:
     events: "/calendar"
     login: "/login"
     tos: "/tos"
-s3-static:
-  endpoint: "https://s3.amazonaws.com/tds-static"
-  paths:
-    footer-logo: "/img/debtcollective/0.0.1/DC-logo_FULL_DARK_CUTOUTfoot_@3x.png"
+footer:
+  logo: "/assets/images/logo-dark.svg"
 dispute-tools:
   endpoint: "https://tools.debtcollective.org"
   paths:

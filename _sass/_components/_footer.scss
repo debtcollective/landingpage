@@ -4,6 +4,10 @@
   color: $white;
   font-weight: 600;
 
+  > .container-fluid {
+    max-width: map-get($container-max-widths, xl);
+  }
+
   > *:not(:first-child) {
     @include media-breakpoint-up(md) {
       margin-top: 5.25rem;

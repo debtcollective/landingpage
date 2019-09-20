@@ -8,7 +8,7 @@
   justify-content: center;
   transition: all 0.216s ease;
   transition-delay: 0.216s;
-  
+
   &-col {
     align-items: center;
     display: flex;
@@ -19,10 +19,10 @@
   &.slider-nav-open {
     transition-delay: 0s;
   }
-  
+
   &.active,
   &.slider-nav-open {
-    background: $beige; 
+    background: $beige;
     border-color: $grey-2;
     height: $header-height-sm * $active-proportion;
 
@@ -47,7 +47,7 @@
     &.slider-nav-open {
       height: $header-height-md * $active-proportion;
     }
-    
+
     .logo {
       width: 12rem;
     }
@@ -55,10 +55,7 @@
 
   @include media-breakpoint-up(xl) {
     .logo {
-      width: 10rem;
       position: relative;
-      // fix visual effect with logo text and navigation text
-      top: 0.125rem;
     }
 
     &.active,

@@ -1,7 +1,7 @@
 {% assign urls = site.data.urls %}
 
 <div class="footer">
-  <div class="container-fluid">
+  <div class="container-fluid ml-0">
     <div class="row d-none d-md-flex">
       <div class="footer__list col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6">
         <h6 class="footer__list-head">Organize</h6>
@@ -13,13 +13,18 @@
         <h6 class="footer__list-head">Take Action</h6>
         <div class="footer__list-item">
           <a
-            href="{{ urls.discourse.endpoint | append: urls.discourse.paths.events }}"
+            href="{{
+              urls.discourse.endpoint | append: urls.discourse.paths.events
+            }}"
             >Events</a
           >
         </div>
         <div class="footer__list-item">
           <a
-            href="{{ urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.dispute-tools }}"
+            href="{{
+              urls.dispute - tools.endpoint
+                | append: urls.dispute - tools.paths.dispute - tools
+            }}"
           >
             Dispute your Debt
           </a>
@@ -28,7 +33,7 @@
       <div class="footer__list col-lg-2 col-md-3 col-sm-6 col-6">
         <h6 class="footer__list-head">Learn</h6>
         <div class="footer__list-item">
-          <a href="{{ urls.power-report.endpoint }}">The Power Report</a>
+          <a href="{{ urls.power - report.endpoint }}">The Power Report</a>
         </div>
         <div class="footer__list-item">
           <a href="/#about" data-toggle="collapse" data-target="#hidden-text"
@@ -43,13 +48,19 @@
         <h6 class="footer__list-head">More</h6>
         <div class="footer__list-item">
           <a
-            href="{{ urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.contact }}"
+            href="{{
+              urls.dispute - tools.endpoint
+                | append: urls.dispute - tools.paths.contact
+            }}"
             >Contact</a
           >
         </div>
         <div class="footer__list-item">
           <a
-            href="{{ urls.dispute-tools.endpoint | append: urls.dispute-tools.paths.donate }}"
+            href="{{
+              urls.dispute - tools.endpoint
+                | append: urls.dispute - tools.paths.donate
+            }}"
             >Donate</a
           >
         </div>
@@ -60,26 +71,30 @@
     </div>
   </div>
 
-  <div class="container-fluid">
+  <div class="container-fluid ml-0">
     <div class="row">
       <div class="col-xl-2 col-lg-3 col-md-4 d-none d-md-flex">
         <a href="/">
           <img
             alt="The Debt Collective"
-            src="{{ urls.s3-static.endpoint | append: urls.s3-static.paths.footer-logo }}"
+            src="{{ urls.footer.logo }}"
             height="60"
             width="175"
           />
         </a>
       </div>
-      <div
-        class="col-xl-10 col-lg-9 col-md-8 col-sm-12 col-12 pt-3"
-      >
+      <div class="col-xl-10 col-lg-9 col-md-8 col-sm-12 col-12 pt-3">
         <div class="footer__brand">
           <a href="#top" class="d-md-none back-to-top">Back to top</a>
-          <div class="brand-text copyright">Copyright {{ "now" | date: "%Y" }}</div>
+          <div class="brand-text copyright">
+            Copyright {{ "now" | date: "%Y" }}
+          </div>
           <div class="brand-text tos">
-            <a href="{{ urls.discourse.endpoint | append: urls.discourse.paths.tos }}">
+            <a
+              href="{{
+                urls.discourse.endpoint | append: urls.discourse.paths.tos
+              }}"
+            >
               Terms and Conditions
             </a>
           </div>

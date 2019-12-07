@@ -1,26 +1,25 @@
 main:
-  endpoint: "https://debtcollective.org"
+  endpoint: 'https://debtcollective.org'
 discourse:
   endpoint: https://community.debtcollective.org
   paths:
-    campaigns: "/"
-    collectives: "/"
-    events: "/calendar"
-    login: "/login"
-    tos: "/tos"
+    campaigns: '/'
+    collectives: '/'
+    events: '/calendar'
+    login: '/login'
+    tos: '/tos'
 footer:
-  logo: "/assets/images/logo-dark.svg"
+  logo: '/assets/images/logo-dark.svg'
 dispute-tools:
-  endpoint: "https://tools.debtcollective.org"
+  endpoint: 'https://tools.debtcollective.org'
   paths:
-    dispute-tools: "/dispute-tools"
-    contact: "/contact"
-    donate: "/donate"
+    dispute-tools: '/dispute-tools'
+    contact: '/contact'
 wiki:
-  endpoint: "http://wiki.debtcollective.org"
+  endpoint: 'http://wiki.debtcollective.org'
 power-report:
-  endpoint: "https://powerreport.debtcollective.org"
+  endpoint: 'https://powerreport.debtcollective.org'
 donate:
-  endpoint: "http://tools.debtcollective.org/donate"
+  endpoint: 'http://membership.debtcollective.org'
 repository:
-  endpoint: "https://github.com/debtcollective"
+  endpoint: 'https://github.com/debtcollective'

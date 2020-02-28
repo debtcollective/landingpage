@@ -23,3 +23,5 @@ donate:
   endpoint: 'http://membership.debtcollective.org'
 repository:
   endpoint: 'https://github.com/debtcollective'
+strike:
+  endpoint: 'https://strike.debtcollective.org'

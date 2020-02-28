@@ -18,13 +18,24 @@
           <div class="d-none d-xl-flex">
             <ul class="nav align-items-center" role="navigation">
               <li class="nav-item">
-                <a class="nav-link" href="{{ urls.dispute-tools.endpoint }}">Dispute Your Debt</a>
+                <a class="nav-link" href="{{ urls.strike.endpoint }}"
+                  >Student Debt Strike</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ urls.discourse.endpoint }}">Community</a>
+                <a class="nav-link" href="{{ urls.dispute-tools.endpoint }}"
+                  >Dispute Your Debt</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ urls.power-report.endpoint }}">The Power Report</a>
+                <a class="nav-link" href="{{ urls.discourse.endpoint }}"
+                  >Community</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ urls.power-report.endpoint }}"
+                  >The Power Report</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ urls.donate.endpoint }}">Donate</a>
@@ -36,11 +47,26 @@
       <div class="col-3 col-lg-3">
         <div class="header-col justify-content-end">
           <!-- >= lg -->
-          <a href="{{ urls.discourse.endpoint }}/login" role="button" class="btn btn-session btn-lg btn-outline-dark d-none d-xl-block">Sign up</a>
+          <a
+            href="{{ urls.discourse.endpoint }}/login"
+            role="button"
+            class="btn btn-session btn-lg btn-outline-dark d-none d-xl-block"
+            >Sign up</a
+          >
           <!-- >= md -->
-          <a href="{{ urls.discourse.endpoint }}/login" role="button" class="btn btn-session btn-primary btn-lg d-none d-md-block">Login</a>
+          <a
+            href="{{ urls.discourse.endpoint }}/login"
+            role="button"
+            class="btn btn-session btn-primary btn-lg d-none d-md-block"
+            >Login</a
+          >
           <!-- small -->
-          <a href="{{ urls.discourse.endpoint }}/login" role="button" class="btn btn-session btn-primary btn-sm d-md-none d-xs-block d-sm-block">Login</a>
+          <a
+            href="{{ urls.discourse.endpoint }}/login"
+            role="button"
+            class="btn btn-session btn-primary btn-sm d-md-none d-xs-block d-sm-block"
+            >Login</a
+          >
         </div>
       </div>
     </div>
@@ -50,13 +76,22 @@
 <div id="slider-nav" class="slider-nav d-xl-none">
   <ul class="nav flex-column" role="navigation">
     <li class="nav-item">
-      <a class="nav-link" href="{{ urls.dispute-tools.endpoint }}">Dispute Your Debt</a>
+      <a class="nav-link" href="{{ urls.strike.endpoint }}"
+        >Student Debt Strike</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ urls.dispute-tools.endpoint }}"
+        >Dispute Your Debt</a
+      >
     </li>
     <li class="nav-item">
       <a class="nav-link" href="{{ urls.discourse.endpoint }}">Community</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{ urls.power-report.endpoint }}">The Power Report</a>
+      <a class="nav-link" href="{{ urls.power-report.endpoint }}"
+        >The Power Report</a
+      >
     </li>
     <li class="nav-item">
       <a class="nav-link" href="{{ urls.donate.endpoint }}">Donate</a>
@@ -65,18 +100,18 @@
 </div>
 
 <script>
-  $(window).on('scroll', function () {
-    var $header = $("#debt-collective-header");
+  $(window).on('scroll', function() {
+    var $header = $('#debt-collective-header')
 
-    $header.toggleClass('active', $(window).scrollTop() > $header.height());
-  });
+    $header.toggleClass('active', $(window).scrollTop() > $header.height())
+  })
 
-  $('#menu-trigger').on('click', function () {
-    var $nav = $("#slider-nav");
-    var $header = $("#debt-collective-header");
+  $('#menu-trigger').on('click', function() {
+    var $nav = $('#slider-nav')
+    var $header = $('#debt-collective-header')
 
-    $header.toggleClass('slider-nav-open');
-    $nav.toggleClass('slider-nav-open');
-    $(this).toggleClass('active');
-  });
+    $header.toggleClass('slider-nav-open')
+    $nav.toggleClass('slider-nav-open')
+    $(this).toggleClass('active')
+  })
 </script>

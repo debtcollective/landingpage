@@ -42,4 +42,19 @@
     src="https://unpkg.com/@debtcollective/dc-popup-component@0.0.1/dist/popup-component/popup-component.js"
     crossorigin="anonymous"
   ></script>
+  <script
+    crossorigin="anonymous"
+    integrity="sha384-RldkbFlAPGpy9ZeGqbY6NuAsZlKyumFmaR1ybYiiN9EvhrTpiSzQ9fwyTk3ieWFG"
+    src="https://cdn.jsdelivr.net/gh/GraemeFulton/blm-badge/blmbadge.min.js"
+  ></script>
+  <script>
+    BLMBadge.init({
+      layout: 1,
+      theme: "dark",
+      promoText: "Send a donation " + String.fromCodePoint(0x2192),
+      promoLink: "https://minnesotafreedomfund.org/",
+      message: "To be silent is to be complicit. Black lives matter.",
+      title: "#BlackLivesMatter",
+    });
+  </script>
 </head>

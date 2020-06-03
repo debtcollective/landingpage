@@ -1,6 +1,9 @@
-After much discussion, this is how we are implementing the landing page.
+# Landingpage
 
-Most of this is a clone of the power report repository (http://github.com/debtcollective/www.debtcollective.com).
-If you think you need to edit the cloned files, reconsider!
+This project is powered by [Jekyll](https://jekyllrb.com/)
 
-See the README for the power report for deployment details.
+## Development
+
+```sh
+bundle exec jekyll serve
+```

@@ -37,7 +37,7 @@ exclude:
 - ".circleci"
 - Gemfile
 - Gemfile.lock
-google_analytics_ua: UA-54926002-1
+gtm_id: GTM-TNGT75T
 copy:
   intro:
     title: You are not a loan.

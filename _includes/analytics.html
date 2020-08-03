@@ -1,18 +1,16 @@
-{% assign gaUA = site.google_analytics_ua %}
+{% assign gtmId = site.gtm_id %}
 
-<!-- analytics.js-->
+<!-- Google Tag Manager -->
 <script>
-  window.ga =
-    window.ga ||
-    function() {
-      (ga.q = ga.q || []).push(arguments);
-    };
-  ga.l = +new Date();
-  ga("create", "{{gaUA}}", "auto");
-  ga("send", "pageview");
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "{{gtmId}}");
 </script>
-
-<script
-  async="async"
-  src="https://www.google-analytics.com/analytics.js"
-></script>
+<!-- End Google Tag Manager -->
